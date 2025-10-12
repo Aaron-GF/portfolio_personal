@@ -4,10 +4,12 @@ export default function App() {
   return (
     <>
       <header className="flex justify-end p-10">
-        <ModeToggle>click me</ModeToggle>
+        <ModeToggle></ModeToggle>
       </header>
       <main></main>
-      <footer></footer>
+      <footer>
+        <small>Copyright &copy; 2025 Aaron-GF</small>
+      </footer>
     </>
   );
 }
