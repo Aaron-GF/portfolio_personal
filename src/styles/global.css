@@ -84,6 +84,11 @@ h2 {
   @apply text-2xl font-bold text-primary;
 }
 
+/* navbar */
+nav ul li {
+  @apply flex items-center justify-center cursor-pointer hover:bg-gray-50 dark:hover:bg-secondary hover:text-primary transition-colors w-30;
+}
+
 /* input form */
 form input,
 form textarea {
