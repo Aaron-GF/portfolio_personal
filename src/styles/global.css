@@ -7,20 +7,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
-  scroll-behavior: smooth;
   color: var(--color-foreground);
   background: linear-gradient(
     to bottom,
-    var(--secondary) 0%,
+    var(--primary) 0%,
     var(--background) 20%
   );
-  height: 100dvh;
 }
 
 @theme inline {
@@ -38,7 +37,7 @@ body {
 :root {
   --background: #e6faff;
   --foreground: #081b29;
-  --primary: #00abf0;
+  --primary: #155dfc;
   --secondary: #084562;
 
   /* theme button */
@@ -50,7 +49,7 @@ body {
 .dark {
   --background: #081b29;
   --foreground: #e6faff;
-  --primary: #00abf0;
+  --primary: #155dfc;
   --secondary: #084562;
   --gradient: linear-gradient(
     to bottom,
@@ -64,38 +63,33 @@ body {
   --ring: oklch(0.552 0.016 285.938);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 /* scrollbar */
 ::-webkit-scrollbar {
-  height: 0;
-  width: 0.5rem;
+  @apply w-2;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg2-color);
+  @apply bg-secondary;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-color);
-  border-radius: 5rem;
+  @apply bg-blue-500 rounded-full;
+}
+
+section {
+  @apply h-screen px-5 sm:px-20;
+}
+
+h2 {
+  @apply text-2xl font-bold text-primary;
 }
 
 /* input form */
-form {
-  input,
-  textarea {
-    @apply shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-2 dark:focus:ring-blue-500 dark:focus:border-blue-500;
-  }
+form input,
+form textarea {
+  @apply shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-1 dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none;
+}
 
-  label {
-    @apply mb-2 text-sm font-medium text-gray-900 dark:text-white;
-  }
+form label {
+  @apply text-gray-900 dark:text-white;
 }

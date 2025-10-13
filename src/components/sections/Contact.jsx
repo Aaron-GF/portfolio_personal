@@ -27,19 +27,20 @@ export default function Contact() {
   };
 
   return (
-    <section className="flex justify-center">
-      <form onSubmit={onSubmit} className="flex flex-col gap-5 max-w-md w-full">
+    <section className="flex flex-col justify-center items-center gap-10">
+      <h2>Contacto</h2>
+      <form onSubmit={onSubmit} className="flex flex-col justify-center gap-5 max-w-md w-full">
         <div>
           <label htmlFor="name">Nombre</label>
-          <input type="text" id="name" required />
+          <input type="text" id="name" name="name"required />
         </div>
         <div>
           <label htmlFor="email">Correo electrónico</label>
-          <input type="email" id="email" required />
+          <input type="email" id="email" name="email" required />
         </div>
         <div>
           <label htmlFor="message">Escribe tu mensaje...</label>
-          <textarea type="text" id="message" required />
+          <textarea type="text" id="message" name="message" required />
         </div>
 
         <button
