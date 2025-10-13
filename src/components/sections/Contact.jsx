@@ -27,13 +27,27 @@ export default function Contact() {
   };
 
   return (
-    <section>
-      <form onSubmit={onSubmit}>
-        <input type="text" name="name" required />
-        <input type="email" name="email" required />
-        <textarea name="message" required></textarea>
+    <section className="flex justify-center">
+      <form onSubmit={onSubmit} className="flex flex-col gap-5 max-w-md w-full">
+        <div>
+          <label htmlFor="name">Nombre</label>
+          <input type="text" id="name" required />
+        </div>
+        <div>
+          <label htmlFor="email">Correo electrónico</label>
+          <input type="email" id="email" required />
+        </div>
+        <div>
+          <label htmlFor="message">Escribe tu mensaje...</label>
+          <textarea type="text" id="message" required />
+        </div>
 
-        <button type="submit">Enviar</button>
+        <button
+          type="submit"
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm w-full sm:w-auto h-10 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
+        >
+          Enviar
+        </button>
       </form>
       <span>{result}</span>
     </section>

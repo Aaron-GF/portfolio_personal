@@ -8,7 +8,7 @@ export default function App() {
       <header className="flex justify-end p-10">
         <ModeToggle />
       </header>
-      <main>
+      <main className="flex flex-col justify-center px-10">
         <About />
         <Contact />
       </main>
