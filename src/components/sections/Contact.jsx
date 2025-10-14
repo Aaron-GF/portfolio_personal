@@ -29,10 +29,13 @@ export default function Contact() {
   return (
     <section className="flex flex-col justify-center items-center gap-10">
       <h2>Contacto</h2>
-      <form onSubmit={onSubmit} className="flex flex-col justify-center gap-5 max-w-md w-full">
+      <form
+        onSubmit={onSubmit}
+        className="flex flex-col justify-center gap-5 max-w-md w-full"
+      >
         <div>
           <label htmlFor="name">Nombre</label>
-          <input type="text" id="name" name="name"required />
+          <input type="text" id="name" name="name" required />
         </div>
         <div>
           <label htmlFor="email">Correo electrónico</label>
@@ -40,12 +43,18 @@ export default function Contact() {
         </div>
         <div>
           <label htmlFor="message">Escribe tu mensaje...</label>
-          <textarea type="text" id="message" name="message" required />
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+            className="resize-none h-20"
+            required
+          />
         </div>
 
         <button
           type="submit"
-          className="text-background bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-primary/50 rounded-sm text-sm w-full sm:w-auto h-10 text-center cursor-pointer"
+          className="text-background font-bold bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-primary/50 rounded-sm text-sm w-full sm:w-auto h-10 text-center cursor-pointer"
         >
           Enviar
         </button>

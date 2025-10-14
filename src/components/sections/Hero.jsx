@@ -12,7 +12,7 @@ export default function Hero() {
       >
         <img
           src="/images/me.webp"
-          className="h-52 w-50 rounded-full opacity-80"
+          className="h-52 w-50 rounded-full opacity-80 mask-radial-at-top mask-radial-from-70% mask-radial-to-80% mask-b-from-70%"
           alt="Imagen perfil Aarón"
         />
       </ElectricBorder>
