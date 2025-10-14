@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="flex flex-col gap-5">
+    <section id="About" className="flex flex-col gap-5">
       <h2>Sobre mí</h2>
       <p>
         Mi nombre es Aarón, soy una persona curiosa y autodidacta, he decidido

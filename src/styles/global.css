@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@midudev/tailwind-animations";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -30,33 +31,30 @@ body {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
 
-  /* theme button */
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
 }
 
 :root {
-  --background: #e6faff;
+  --background: #fff;
   --foreground: #081b29;
-  --primary: #155dfc;
-  --secondary: #084562;
+  --primary: #00ABE4;
+  --secondary: #E9F1FA;
 
-  /* theme button */
   --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
+  --input: #DEF294;
+  --ring: #0540F2;
 }
 
 .dark {
-  --background: #081b29;
-  --foreground: #e6faff;
-  --primary: skyblue;
-  --secondary: #084562;
+  --background: #313B2F;
+  --foreground: #fff;
+  --primary: #FBA002;
+  --secondary: #8FCB81;
 
-  /* theme button */
   --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
+  --input: #595959;
   --ring: oklch(0.552 0.016 285.938);
 }
 
@@ -74,7 +72,7 @@ body {
 }
 
 section {
-  @apply h-screen px-5 sm:px-20;
+  @apply flex flex-col justify-center h-screen px-5 sm:px-20;
 }
 
 h2 {
@@ -83,11 +81,15 @@ h2 {
 
 /* navbar */
 nav ul li {
-  @apply flex items-center justify-center cursor-pointer hover:bg-gray-50 dark:hover:bg-secondary hover:text-primary transition-colors w-30;
+  @apply flex items-center justify-center cursor-pointer hover:bg-secondary hover:text-background transition-colors w-30;
+}
+
+nav ul li a {
+  @apply flex items-center justify-center size-full;
 }
 
 /* input form */
 form input,
 form textarea {
-  @apply shadow-xs bg-gray-50 border border-gray-300 text-sm rounded-sm focus:ring-1 focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 outline-none;
+  @apply shadow-xs bg-input border border-ring text-sm rounded-sm focus:ring-1 focus:ring-primary focus:border-primary block w-full p-2.5 outline-none;
 }

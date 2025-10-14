@@ -27,7 +27,7 @@ export default function App() {
         <small className="my-auto">Copyright &copy; 2025 Aaron-GF</small>
         <a
           href="#Hero"
-          className="flex justify-center items-center bg-primary size-10 rounded-sm hover:animate-[bounce_2s_infinite]"
+          className="flex justify-center items-center bg-primary size-10 rounded-sm animate-[bounce_2s_infinite]"
         >
           <img src="/icons/arrow-up.svg" alt="flecha hacia arriba" />
         </a>

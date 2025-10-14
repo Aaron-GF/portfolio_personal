@@ -2,13 +2,14 @@ import ElectricBorder from "@/components/ui/ElectricBorder";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-evenly">
+    <section id="Hero" className="flex items-center justify-evenly">
       <ElectricBorder
         color={"var(--primary)"}
         speed={1}
         chaos={0.5}
         thickness={2}
         style={{ borderRadius: 100 }}
+        className="animate-fade-in"
       >
         <img
           src="/images/me.webp"
