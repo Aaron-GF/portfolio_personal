@@ -51,11 +51,6 @@ body {
   --foreground: #e6faff;
   --primary: #155dfc;
   --secondary: #084562;
-  --gradient: linear-gradient(
-    to bottom,
-    var(--secondary) 0%,
-    var(--background) 20%
-  );
 
   /* theme button */
   --border: oklch(1 0 0 / 10%);
@@ -73,7 +68,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-blue-500 rounded-full;
+  @apply bg-primary rounded-full;
 }
 
 section {
