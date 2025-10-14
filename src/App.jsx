@@ -9,7 +9,7 @@ import Skills from "@/components/sections/Skills";
 export default function App() {
   return (
     <>
-      <header className="flex justify-around items-center h-18 bg-background fixed w-full border-b-1 border-primary">
+      <header className="flex justify-around items-center h-18 bg-background fixed z-10 w-full border-b-1 border-primary">
         <h1 className="text-3xl font-bold">
           <span className="text-primary">A</span>arón
         </h1>
@@ -23,7 +23,7 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
-      <footer className="flex justify-around items-center bg-gradient-to-t from-primary to-transparent h-20">
+      <footer className="flex justify-around items-center h-20">
         <small className="my-auto">Copyright &copy; 2025 Aaron-GF</small>
         <a
           href="#Hero"

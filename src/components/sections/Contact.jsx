@@ -45,7 +45,7 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm w-full sm:w-auto h-10 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
+          className="text-background bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-primary/50 rounded-sm text-sm w-full sm:w-auto h-10 text-center cursor-pointer"
         >
           Enviar
         </button>

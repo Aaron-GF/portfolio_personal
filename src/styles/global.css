@@ -18,7 +18,9 @@ body {
   background: linear-gradient(
     to bottom,
     var(--primary) 0%,
-    var(--background) 20%
+    var(--background) 5%,
+    var(--background) 98%,
+    var(--primary) 100%
   );
 }
 
@@ -49,7 +51,7 @@ body {
 .dark {
   --background: #081b29;
   --foreground: #e6faff;
-  --primary: #155dfc;
+  --primary: skyblue;
   --secondary: #084562;
 
   /* theme button */
@@ -87,9 +89,5 @@ nav ul li {
 /* input form */
 form input,
 form textarea {
-  @apply shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-1 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-1 dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none;
-}
-
-form label {
-  @apply text-gray-900 dark:text-white;
+  @apply shadow-xs bg-gray-50 border border-gray-300 text-sm rounded-sm focus:ring-1 focus:ring-primary focus:border-primary block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600  outline-none;
 }
