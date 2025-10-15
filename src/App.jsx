@@ -1,7 +1,7 @@
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
-import Hero from "@/components/sections/Hero";
+import Hero from "@/components/sections/Hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
