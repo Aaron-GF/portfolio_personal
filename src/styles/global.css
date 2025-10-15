@@ -18,10 +18,10 @@ body {
   color: var(--color-foreground);
   background: linear-gradient(
     to bottom,
-    var(--primary) 0%,
+    var(--secondary) 0%,
     var(--background) 5%,
     var(--background) 99%,
-    var(--primary) 100%
+    var(--secondary) 100%
   );
 }
 
@@ -37,14 +37,14 @@ body {
 }
 
 :root {
-  --background: #F1F5F8;
-  --foreground: #1C2B33;
-  --primary: #0082FB;
-  --secondary: #0064E6;
+  --background: #f1f5f8;
+  --foreground: #1c2b33;
+  --primary: #0082fb;
+  --secondary: #0064e6;
 
   --border: #657786;
-  --input: #AAB8C2;
-  --ring: #E1E8ED;
+  --input: #aab8c2;
+  --ring: #e1e8ed;
 }
 
 .dark {
@@ -71,7 +71,7 @@ body {
   @apply bg-primary rounded-full;
 }
 
-section {
+section#Projects, section#Contact, section#About, section#Skills {
   @apply flex flex-col justify-center h-screen px-5 sm:px-20;
 }
 

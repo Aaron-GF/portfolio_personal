@@ -11,7 +11,7 @@ export default function App() {
     <>
       <header className="flex justify-around items-center h-18 bg-background fixed z-10 w-full border-b-1 border-primary">
         <h1 className="text-3xl font-bold">
-          <span className="text-primary">A</span>arón
+          <span className="text-secondary">A</span>arón
         </h1>
         <Navbar />
         <ModeToggle />
@@ -33,8 +33,8 @@ export default function App() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            class="lucide lucide-arrow-up-icon lucide-arrow-up size-7 text-background"
+            strokeWidth="2"
+            className="lucide lucide-arrow-up-icon lucide-arrow-up size-7 text-background"
           >
             <path d="m5 12 7-7 7 7" />
             <path d="M12 19V5" />

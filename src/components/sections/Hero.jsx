@@ -2,9 +2,9 @@ import ElectricBorder from "@/components/ui/ElectricBorder";
 
 export default function Hero() {
   return (
-    <section id="Hero" className="flex items-center justify-evenly">
+    <section id="Hero" className="flex items-center justify-evenly h-screen">
       <ElectricBorder
-        color={"var(--primary)"}
+        color={"var(--secondary)"}
         speed={1}
         chaos={0.5}
         thickness={2}
