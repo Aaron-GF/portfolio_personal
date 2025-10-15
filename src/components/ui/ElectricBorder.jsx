@@ -124,7 +124,7 @@ const ElectricBorder = ({
     borderStyle: "solid",
     borderColor: hexToRgba(color, 0.6),
     filter: `blur(${0.5 + thickness * 0.25}px)`,
-    opacity: 0.5,
+    opacity: 0,
   };
 
   const glow2Style = {
@@ -140,7 +140,7 @@ const ElectricBorder = ({
     ...inheritRadius,
     transform: "scale(1.08)",
     filter: "blur(32px)",
-    opacity: 0.3,
+    opacity: 0,
     zIndex: -1,
     background: `linear-gradient(-30deg, ${hexToRgba(
       color,

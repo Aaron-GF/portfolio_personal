@@ -37,25 +37,25 @@ body {
 }
 
 :root {
-  --background: #fff;
-  --foreground: #081b29;
-  --primary: #00ABE4;
-  --secondary: #E9F1FA;
+  --background: #F1F5F8;
+  --foreground: #1C2B33;
+  --primary: #0082FB;
+  --secondary: #0064E6;
 
-  --border: oklch(0.92 0.004 286.32);
-  --input: #DEF294;
-  --ring: #0540F2;
+  --border: #657786;
+  --input: #AAB8C2;
+  --ring: #E1E8ED;
 }
 
 .dark {
-  --background: #313B2F;
-  --foreground: #fff;
-  --primary: #FBA002;
-  --secondary: #8FCB81;
+  --background: #2a2a2a;
+  --foreground: #c0c0c0;
+  --primary: #ffc340;
+  --secondary: #ff9800;
 
-  --border: oklch(1 0 0 / 10%);
-  --input: #595959;
-  --ring: oklch(0.552 0.016 285.938);
+  --border: #454546;
+  --input: #666666;
+  --ring: #8c8c8c;
 }
 
 /* scrollbar */
@@ -64,7 +64,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-secondary;
+  @apply bg-input;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -81,7 +81,7 @@ h2 {
 
 /* navbar */
 nav ul li {
-  @apply flex items-center justify-center cursor-pointer hover:bg-secondary hover:text-background transition-colors w-30;
+  @apply flex items-center justify-center cursor-pointer hover:bg-input hover:text-background transition-colors w-30;
 }
 
 nav ul li a {

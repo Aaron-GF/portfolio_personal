@@ -29,7 +29,16 @@ export default function App() {
           href="#Hero"
           className="flex justify-center items-center bg-primary size-10 rounded-sm animate-[bounce_2s_infinite]"
         >
-          <img src="/icons/arrow-up.svg" alt="flecha hacia arriba" />
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="lucide lucide-arrow-up-icon lucide-arrow-up size-7 text-background"
+          >
+            <path d="m5 12 7-7 7 7" />
+            <path d="M12 19V5" />
+          </svg>
         </a>
       </footer>
     </>
