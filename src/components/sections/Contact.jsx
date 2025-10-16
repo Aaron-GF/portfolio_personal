@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="Contact" className="flex flex-col justify-center items-center gap-10 scroll-mt-10">
+    <section id="Contact" className="flex flex-col justify-center items-center gap-3 scroll-mt-10">
       <h2>Contacto</h2>
       <form
         onSubmit={onSubmit}

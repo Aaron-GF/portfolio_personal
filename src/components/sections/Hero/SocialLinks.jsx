@@ -13,7 +13,7 @@ export default function SocialLinks() {
     <div className="flex gap-2">
       {/* boton para copiar correo */}
       <button
-        className="social-btn"
+        className="social-btn cursor-pointer"
         data-popover-target="popover-bottom"
         data-popover-placement="bottom"
         onClick={handleCopy}
@@ -51,17 +51,15 @@ export default function SocialLinks() {
         data-popover
         id="popover-bottom"
         role="tooltip"
-        className="absolute z-10 invisible inline-block text-sm text-foreground transition-opacity duration-300 bg-input border border-ring rounded-lg shadow-xs opacity-0"
+        className="absolute flex flex-col justify-center bg-input text-sm w-64 h-16 text-foreground transition-opacity duration-300 rounded-lg shadow-xs opacity-0"
       >
-        <div data-popper-arrow></div>
-        <div className="px-3 py-3 bg-border border-b border-ring rounded-t-lg">
-          <h3 className="font-semibold text-foreground">
-            Copiar dirección de correo
-          </h3>
-        </div>
-        <div className="px-3 py-2 text-center">
-          <p>aarongarcia567@gmail.com</p>
-        </div>
+        <div data-popper-arrow className="bg-border"></div>
+        <h3 className="flex items-center justify-center text-secondary bg-border rounded-t-lg h-8">
+          Copiar dirección de correo
+        </h3>
+        <p className="flex items-center justify-center h-10">
+          aarongarcia567@gmail.com
+        </p>
       </div>
 
       {/* enlace a linkedin */}
