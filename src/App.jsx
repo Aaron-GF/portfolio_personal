@@ -16,14 +16,14 @@ export default function App() {
         <Navbar />
         <ModeToggle />
       </header>
-      <main className="flex flex-col justify-center px-10">
+      <main className="flex flex-col justify-center items-center w-full">
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Contact />
       </main>
-      <footer className="flex justify-around items-center h-20">
+      <footer className="flex justify-around items-center h-30">
         <small className="my-auto">Copyright &copy; 2025 Aaron-GF</small>
         <a
           href="#Hero"

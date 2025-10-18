@@ -36,6 +36,7 @@ body {
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --neon: 0 0 10px var(--secondary);
 }
 
 :root {
@@ -74,7 +75,7 @@ body {
 }
 
 section#Projects, section#Contact, section#About, section#Skills {
-  @apply flex flex-col justify-center h-screen px-5 sm:px-20;
+  @apply flex flex-col justify-center h-screen w-full max-w-11/12 sm:max-w-9/12;
 }
 
 h2 {
