@@ -3,7 +3,7 @@ export const projects = [
     title: "Juego de fútbol - Footdle",
     image: "/images/projects/footdle-football-app/screen-capture.png",
     description:
-      "Juego web inspirado en tic-tac-toe para aficionados al fútbol. Permite seleccionar casillas del tablero y descubrir jugadores que han jugado en ambos equipos relacionados con esa posición.",
+      "Juego web inspirado en el 3 en raya para aficionados al fútbol. Permite seleccionar casillas del tablero y descubrir jugadores que han jugado en ambos equipos relacionados con esa posición.",
     links: {
       demo: "https://footdle-aa.vercel.app/",
       code: "https://github.com/Aaron-GF/footdle",
@@ -14,7 +14,7 @@ export const projects = [
     title: "Weather App",
     image: "/images/projects/weather-app/screen-capture.png",
     description:
-      "Aplicación del tiempo que muestra datos actuales en tiempo real, mostrando diversos parámetros. Permite buscar por lugar mostrando coincidencias y tiene un diseño responsivo.",
+      "Aplicación del tiempo que muestra datos actuales en tiempo real, mostrando diversos parámetros. Permite buscar por lugar mostrando coincidencias.",
     links: {
       demo: "https://weather-app-twister.vercel.app/",
       code: "https://github.com/Aaron-GF/weather-app.git",

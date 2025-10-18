@@ -63,15 +63,7 @@ body {
 
 /* scrollbar */
 ::-webkit-scrollbar {
-  @apply w-2;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-input;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-secondary rounded-full;
+  @apply hidden;
 }
 
 section#Projects, section#Contact, section#About, section#Skills {
@@ -110,7 +102,7 @@ nav ul li a {
 }
 
 .tech-container img {
-  @apply size-12 hover:scale-110 hover:drop-shadow-md hover:drop-shadow-secondary transition-transform cursor-crosshair;
+  @apply size-12 hover:scale-110 hover:drop-shadow-md hover:drop-shadow-secondary/50 transition-transform cursor-crosshair;
 }
 
 /* entradas para el formulario */
