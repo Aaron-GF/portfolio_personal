@@ -38,7 +38,7 @@ export default function SocialLinks() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             className="lucide lucide-check-check-icon lucide-check-check size-6"
           >
             <path d="M18 6 7 17l-5-5" />

@@ -35,7 +35,7 @@ export default function Projects() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     className="lucide lucide-external-link-icon lucide-external-link size-6"
                   >
                     <path d="M15 3h6v6" />
@@ -53,7 +53,7 @@ export default function Projects() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     className="lucide lucide-code-xml-icon lucide-code-xml size-6"
                   >
                     <path d="m18 16 4-4-4-4" />
