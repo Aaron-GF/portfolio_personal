@@ -1,8 +1,8 @@
 import React from "react";
-import Spinner from "@/components/ui/Spinner";
+import { Spinner, Sent } from "@/components/ui/SendBtn";
 
 export default function Contact() {
-  const [status, setStatus] = React.useState("loading"); // idle | loading | success | error
+  const [status, setStatus] = React.useState("idle"); // idle | loading | success | error
   const [message, setMessage] = React.useState("");
 
   const onSubmit = async (event) => {
@@ -23,7 +23,7 @@ export default function Contact() {
 
       if (data.success) {
         setStatus("success");
-        setMessage("Mensaje enviado correctamente ✅");
+        setMessage("Mensaje enviado con éxito!");
         event.target.reset();
       } else {
         throw new Error(data.message ?? "Error al enviar el mensaje");
@@ -49,7 +49,7 @@ export default function Contact() {
 
       <form
         onSubmit={onSubmit}
-        className="flex flex-col justify-center gap-5 max-w-md w-full"
+        className="relative flex flex-col justify-center gap-5 max-w-md w-full"
       >
         <div>
           <label htmlFor="name">Nombre</label>
@@ -78,21 +78,10 @@ export default function Contact() {
             status === "loading" ? "opacity-80 cursor-not-allowed" : ""
           }`}
         >
-          {status === "loading" ? (
-            <>
-              <Spinner />
-              <span>Enviando...</span>
-            </>
-          ) : (
-            "Enviar"
-          )}
+          {status === "loading" ? <Spinner /> : status === "success" ? <Sent /> : "Enviar"}
         </button>
-        {message && (
-          <p
-            className={`text-sm font-medium ${
-              status === "success" ? "text-green-600" : "text-red-500"
-            }`}
-          >
+        {status === "error" && (
+          <p className={`text-sm font-medium absolute -bottom-10 text-red-500`}>
             {message}
           </p>
         )}

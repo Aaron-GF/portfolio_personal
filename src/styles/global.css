@@ -60,11 +60,17 @@ body {
   --ring: #8c8c8c;
 }
 
+/* globals */
+button, a {
+  @apply cursor-pointer;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   @apply hidden;
 }
 
+/* sections */
 section#Projects, section#Contact, section#About, section#Skills {
   @apply flex flex-col justify-center h-screen w-full max-w-11/12 sm:max-w-9/12;
 }
@@ -79,7 +85,7 @@ h3 {
 
 /* navbar */
 nav ul li {
-  @apply flex items-center justify-center cursor-pointer hover:bg-input hover:text-background transition-colors w-30;
+  @apply flex items-center justify-center hover:bg-input hover:text-background transition-colors w-30;
 }
 
 nav ul li a {

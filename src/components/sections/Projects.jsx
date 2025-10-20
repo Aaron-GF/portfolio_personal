@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section id="Projects">
       <h2>Proyectos</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 px-6">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -29,7 +29,7 @@ export default function Projects() {
                   href={project.links.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center w-10 h-10 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
+                  className="flex justify-center items-center size-10 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ export default function Projects() {
                   href={project.links.code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center w-10 h-10 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
+                  className="flex justify-center items-center size-10 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
                 >
                   <svg
                     viewBox="0 0 24 24"
