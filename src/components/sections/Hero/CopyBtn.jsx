@@ -13,7 +13,7 @@ export default function CopyBtn() {
     <>
       {/* boton para copiar correo */}
       <button
-        className="social-btn cursor-pointer"
+        className="social-btn"
         data-popover-target="popover-bottom"
         data-popover-placement="bottom"
         onClick={handleCopy}
@@ -51,7 +51,7 @@ export default function CopyBtn() {
         data-popover
         id="popover-bottom"
         role="tooltip"
-        className="absolute flex flex-col justify-center bg-input text-sm w-64 h-16 text-foreground transition-opacity duration-300 rounded-lg shadow-xs opacity-0"
+        className="absolute invisible flex flex-col justify-center bg-input text-sm w-64 h-16 text-foreground transition-opacity duration-300 rounded-lg shadow-xs opacity-0"
       >
         <div data-popper-arrow className="bg-border"></div>
         <h3 className="flex items-center justify-center text-secondary bg-border rounded-t-lg h-8">

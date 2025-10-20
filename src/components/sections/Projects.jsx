@@ -14,14 +14,14 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-50"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-30"
               />
             </div>
 
             {/* Overlay */}
             <div className="absolute inset-0 flex flex-col justify-evenly items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-b from-transparent to-secondary/80 px-4">
-              <h3 className="text-2xl font-semibold">{project.title}</h3>
-              <p className="text-sm mb-2 text-white">{project.description}</p>
+              <h3 className="font-semibold text-xl">{project.title}</h3>
+              <p className="text-xs text-white max-w-19/20">{project.description}</p>
 
               {/* Enlaces */}
               <div className="flex gap-6">
@@ -29,14 +29,14 @@ export default function Projects() {
                   href={project.links.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center size-10 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
+                  className="flex justify-center items-center size-9 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
                 >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    className="lucide lucide-external-link-icon lucide-external-link size-6"
+                    className="lucide lucide-external-link-icon lucide-external-link size-5"
                   >
                     <path d="M15 3h6v6" />
                     <path d="M10 14 21 3" />
@@ -47,14 +47,14 @@ export default function Projects() {
                   href={project.links.code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center size-10 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
+                  className="flex justify-center items-center size-9 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
                 >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    className="lucide lucide-code-xml-icon lucide-code-xml size-6"
+                    className="lucide lucide-code-xml-icon lucide-code-xml size-5"
                   >
                     <path d="m18 16 4-4-4-4" />
                     <path d="m6 8-4 4 4 4" />
@@ -68,7 +68,7 @@ export default function Projects() {
                 {project.tools.map((tool, i) => (
                   <span
                     key={i}
-                    className="flex items-center justify-center bg-background text-primary font-semibold text-xs rounded-lg min-h-5 min-w-24"
+                    className="flex items-center justify-center bg-background text-primary font-semibold text-xs rounded-lg min-h-5 min-w-3/10"
                   >
                     {tool}
                   </span>

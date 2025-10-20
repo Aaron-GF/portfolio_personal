@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <>
-      <header className="fixed top-0 z-10 w-full bg-background">
+      <header className="fixed top-0 z-20 w-full bg-background">
         <div className="flex justify-around items-center h-18 relative">
           <h1 className="text-3xl font-bold">
             <span className="text-secondary">A</span>arón
