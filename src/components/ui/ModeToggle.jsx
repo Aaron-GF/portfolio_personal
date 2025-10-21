@@ -13,7 +13,10 @@ export function ModeToggle() {
   };
 
   return (
-    <button className="cursor-pointer" onClick={toggleTheme}>
+    <button
+      className="flex items-center justify-center cursor-pointer hover:bg-input/70 size-10 rounded-md"
+      onClick={toggleTheme}
+    >
       {theme === "dark" ? (
         <svg
           fill="none"

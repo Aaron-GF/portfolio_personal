@@ -60,19 +60,19 @@ body {
   --ring: #8c8c8c;
 }
 
-/* globals */
+/* globales */
 button, a {
   @apply cursor-pointer;
 }
 
-/* scrollbar */
+/* barra de desplazamiento(no esta visible) */
 ::-webkit-scrollbar {
   @apply hidden;
 }
 
-/* sections */
+/* secciones */
 section#Projects, section#Contact, section#About, section#Skills {
-  @apply flex flex-col justify-center h-screen w-full max-w-11/12 xl:max-w-9/12;
+  @apply flex flex-col justify-center h-full md:h-screen w-full max-w-11/12 xl:max-w-9/12 md:mb-0 mb-20;
 }
 
 h2 {
@@ -83,16 +83,7 @@ h3 {
   @apply font-semibold text-primary;
 }
 
-/* navbar */
-nav ul li {
-  @apply flex items-center justify-center hover:bg-input hover:text-background transition-colors w-30;
-}
-
-nav ul li a {
-  @apply flex items-center justify-center size-full;
-}
-
-/* social links */
+/* botones de las redes sociales */
 .social-btn {
   @apply text-primary hover:text-background transition-colors border border-primary hover:bg-primary active:scale-95 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mt-5;
 }

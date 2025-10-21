@@ -29,12 +29,16 @@ export default function App() {
   return (
     <>
       <header className="fixed top-0 z-20 w-full bg-background">
-        <div className="flex justify-around items-center h-18 relative">
-          <h1 className="text-3xl font-bold">
+        <div className="flex items-center justify-around gap-4 h-18 relative w-full px-4 md:px-8">
+          <div className="order-1 md:order-2">
+            <Navbar />
+          </div>
+          <h1 className="order-2 md:order-1 text-3xl font-bold flex-1 text-center md:text-left md:flex-none">
             <span className="text-secondary">A</span>arón
           </h1>
-          <Navbar />
-          <ModeToggle />
+          <div className="order-3">
+            <ModeToggle />
+          </div>
           <div className="absolute bottom-0 left-0 h-[2px] w-full bg-primary/20">
             <div
               className="h-full bg-secondary transition-[width] duration-150 ease-out"
