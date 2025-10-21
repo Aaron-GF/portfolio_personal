@@ -4,7 +4,7 @@ export function Spinner() {
     <div role="status">
       <svg
         aria-hidden="true"
-        className="size-6 text-background animate-spin fill-secondary"
+        className="size-6 text-background animate-[spin_1s_linear_infinite] fill-secondary"
         viewBox="0 0 100 101"
         fill="none"
       >

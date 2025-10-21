@@ -1,5 +1,5 @@
 @import "tailwindcss";
-/* @plugin "@midudev/tailwind-animations"; */
+@plugin "@midudev/tailwind-animations";
 
 @plugin "flowbite/plugin";
 
@@ -51,7 +51,7 @@ body {
 
 .dark {
   --background: #2a2a2a;
-  --foreground: #c0c0c0;
+  --foreground: #d5d5d5;
   --primary: #ffc340;
   --secondary: #ff9800;
 
