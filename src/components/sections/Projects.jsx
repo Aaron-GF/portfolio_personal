@@ -27,6 +27,7 @@ export default function Projects() {
               <div className="flex gap-6">
                 <a
                   href={project.links.demo}
+                  aria-label="Enlace a la demo del proyecto"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center items-center size-9 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"
@@ -45,6 +46,7 @@ export default function Projects() {
                 </a>
                 <a
                   href={project.links.code}
+                  aria-label="Enlace al código del proyecto"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center items-center size-9 rounded-full bg-white border border-secondary outline-2 outline-white text-gray-900 hover:scale-110 transition-transform"

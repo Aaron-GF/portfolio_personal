@@ -14,6 +14,7 @@ export default function CopyBtn() {
       {/* boton para copiar correo */}
       <button
         className="social-btn"
+        aria-label="Copiar correo"
         data-popover-target="popover-bottom"
         data-popover-placement="bottom"
         onClick={handleCopy}

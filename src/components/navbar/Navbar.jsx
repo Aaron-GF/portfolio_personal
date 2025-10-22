@@ -35,7 +35,6 @@ export default function Navbar() {
   return (
     <nav className="relative flex items-center h-full">
       <button
-        type="button"
         className="flex items-center justify-center size-10 rounded-md hover:bg-input/70 md:hidden"
         aria-label="Abrir menú"
         aria-expanded={isMenuOpen}
@@ -63,7 +62,10 @@ export default function Navbar() {
         } md:flex md:size-full md:space-x-6 flex-col md:flex-row absolute md:static left-0 top-14 md:w-auto bg-background md:bg-transparent shadow-lg md:shadow-none border border-input md:border-0 md:rounded-none z-30 w-screen`}
       >
         {SECTIONS.map(({ id, label }) => (
-          <li key={id} className="flex items-center md:justify-center md:px-0 h-8 md:h-full md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-30">
+          <li
+            key={id}
+            className="flex items-center md:justify-center md:px-0 h-8 md:h-full md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-30"
+          >
             <a
               href={`#${id}`}
               onClick={() => setIsMenuOpen(false)}

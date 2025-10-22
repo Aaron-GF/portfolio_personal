@@ -28,7 +28,7 @@ export default function Hero() {
     setIsDark(theme === "dark");
   }, [theme]);
 
-  const backgroundSrc = isDark ? "/images/bg-hero-dark.png" : "/images/bg-hero-light.png";
+  const backgroundSrc = isDark ? "assets/images/bg-hero-dark.png" : "assets/images/bg-hero-light.png";
 
   return (
     <section
@@ -43,7 +43,7 @@ export default function Hero() {
       />
       <div className="bg-gradient-to-t from-background to-secondary rounded-full shadow-md shadow-primary animate-fade-in">
         <img
-          src="/images/me.webp"
+          src="assets/images/me.webp"
           className="h-52 w-50 rounded-full mask-radial-at-top mask-radial-from-70% mask-radial-to-80% mask-b-from-70%"
           alt="Imagen perfil Aarón"
         />

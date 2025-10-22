@@ -14,6 +14,7 @@ export function ModeToggle() {
 
   return (
     <button
+      aria-label="Toggle theme"
       className="flex items-center justify-center cursor-pointer hover:bg-input/70 size-10 rounded-md"
       onClick={toggleTheme}
     >

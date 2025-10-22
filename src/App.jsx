@@ -29,7 +29,7 @@ export default function App() {
   return (
     <>
       <header className="fixed top-0 z-20 w-full bg-background">
-        <div className="flex items-center justify-around gap-4 h-18 relative w-full px-4 md:px-8">
+        <div className="flex items-center justify-around gap-4 h-18 relative w-full md:px-8">
           <div className="order-1 md:order-2">
             <Navbar />
           </div>

@@ -1,14 +1,16 @@
-import CopyBtn from "@/components/sections/Hero/CopyBtn";
+import CopyMailBtn from "@/components/sections/Hero/CopyMailBtn";
 
 export default function SocialLinks() {
   return (
     <div className="flex gap-2">
-      <CopyBtn />
+      <CopyMailBtn />
       {/* enlace a linkedin */}
       <a
         href="https://www.linkedin.com/in/aaron-garcia-fernandez/"
         target="_blank"
         className="social-btn"
+        rel="noopener noreferrer"
+        aria-label="Enlace a LinkedIn"
       >
         <svg
           viewBox="0 0 24 24"
@@ -28,6 +30,8 @@ export default function SocialLinks() {
         href="https://github.com/Aaron-GF"
         target="_blank"
         className="social-btn"
+        rel="noopener noreferrer"
+        aria-label="Enlace a GitHub"
       >
         <svg
           viewBox="0 0 24 24"
