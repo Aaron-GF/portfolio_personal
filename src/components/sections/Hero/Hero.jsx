@@ -5,9 +5,12 @@ import { useTheme } from "@/providers/ThemeProvider";
 export default function Hero() {
   const { theme } = useTheme();
   const prefersDark = () =>
-    typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  const [isDark, setIsDark] = useState(() => theme === "dark" || (theme === "system" && prefersDark()));
+  const [isDark, setIsDark] = useState(
+    () => theme === "dark" || (theme === "system" && prefersDark())
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -28,7 +31,9 @@ export default function Hero() {
     setIsDark(theme === "dark");
   }, [theme]);
 
-  const backgroundSrc = isDark ? "assets/images/bg-hero-dark.png" : "assets/images/bg-hero-light.png";
+  const backgroundSrc = isDark
+    ? "assets/images/bg-hero-dark.png"
+    : "assets/images/bg-hero-light.png";
 
   return (
     <section
@@ -46,6 +51,7 @@ export default function Hero() {
           src="assets/images/me.webp"
           className="h-52 w-50 rounded-full mask-radial-at-top mask-radial-from-70% mask-radial-to-80% mask-b-from-70%"
           alt="Imagen perfil Aarón"
+          fetchPriority="high"
         />
       </div>
       <div className="flex flex-col justify-center">

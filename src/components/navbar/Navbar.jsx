@@ -68,6 +68,7 @@ export default function Navbar() {
           >
             <a
               href={`#${id}`}
+              aria-label={label}
               onClick={() => setIsMenuOpen(false)}
               className={
                 active === id
