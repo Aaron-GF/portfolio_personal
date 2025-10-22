@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 // Globals css
 import "@/styles/global.css";
 import "@/styles/themeTransition.css";
+import "flowbite";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
