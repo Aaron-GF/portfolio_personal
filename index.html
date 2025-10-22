@@ -11,8 +11,16 @@
     <meta name="keywords" content="Portfolio, Aarón, Desarrollo Web" />
     <meta name="author" content="Aarón" />
 
-    <!-- estilos -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <!-- estilos // carga global.css con prioridad y stylesheets diferido para evitar bloqueos -->
+    <link
+      rel="preload"
+      href="/src/styles/global.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/src/styles/global.css" />
+    </noscript>
 
     <!-- coge el tema almacenado en local storage para aplicarlo antes de que React se monte y evitar flash cuando se recarga la pagina -->
     <script>
@@ -33,7 +41,9 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script type="module" src="/src/main.jsx" defer></script>
+
+    <!-- carga diferida para no bloquear el renderizado -->
+    <script src="../node_modules/flowbite/dist/flowbite.min.js" defer></script>
   </body>
 </html>
