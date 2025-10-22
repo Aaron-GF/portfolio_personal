@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "Juego de fútbol - Footdle",
-    image: "assets/images/projects/footdle-football-app/screen-capture.png",
+    image: "assets/images/projects/footdle-football-app/screen-capture.webp",
     description:
       "Juego web inspirado en el 3 en raya para aficionados al fútbol. Permite seleccionar casillas del tablero y descubrir jugadores que han jugado en ambos equipos relacionados con esa posición.",
     links: {
@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     title: "Weather App",
-    image: "assets/images/projects/weather-app/screen-capture.png",
+    image: "assets/images/projects/weather-app/screen-capture.webp",
     description:
       "Aplicación del tiempo que muestra datos actuales en tiempo real, mostrando diversos parámetros. Permite buscar por lugar mostrando coincidencias.",
     links: {
@@ -29,7 +29,7 @@ export const projects = [
   },
   {
     title: "App música Jammming",
-    image: "assets/images/projects/jammming-music-player/player.png",
+    image: "assets/images/projects/jammming-music-player/player.webp",
     description:
       "Jammming es una aplicación web que permite a los usuarios buscar canciones, reproducirlas, organizarlas en listas personalizadas y guardar estas playlists directamente en su cuenta de Spotify.",
     links: {
