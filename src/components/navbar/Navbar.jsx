@@ -59,12 +59,12 @@ export default function Navbar() {
       <ul
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } md:flex md:size-full md:space-x-6 flex-col md:flex-row absolute md:static left-0 top-14 md:w-auto bg-background md:bg-transparent shadow-lg md:shadow-none border border-input md:border-0 md:rounded-none z-30 w-screen`}
+        } md:flex md:size-full md:space-x-6 flex-col md:flex-row absolute md:static left-0 top-18 md:w-auto bg-background md:bg-transparent shadow-lg md:shadow-none border border-input md:border-0 md:rounded-none z-30 w-screen`}
       >
         {SECTIONS.map(({ id, label }) => (
           <li
             key={id}
-            className="flex items-center md:justify-center md:px-0 h-8 md:h-full md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-30"
+            className="flex items-center md:justify-center md:px-0 h-full md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-30"
           >
             <a
               href={`#${id}`}

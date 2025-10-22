@@ -29,7 +29,7 @@ export const skills = [
         className: "animate-[spin_12s_linear_infinite]",
       },
       {
-        src: "assets/icons/skills/tailwind-css-logo.png",
+        src: "assets/icons/skills/tailwind-css.svg",
         alt: "icono tailwind",
         title: "Tailwind CSS",
       },

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ModeToggle } from "@/components/ui/ModeToggle";
+
+/* secciones */
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero/Hero";
@@ -12,9 +14,11 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement;
       const totalScrollable = scrollHeight - clientHeight;
-      const progress = totalScrollable > 0 ? (scrollTop / totalScrollable) * 100 : 0;
+      const progress =
+        totalScrollable > 0 ? (scrollTop / totalScrollable) * 100 : 0;
       setScrollProgress(progress);
     };
 
@@ -30,7 +34,7 @@ export default function App() {
     <>
       <header className="fixed top-0 z-20 w-full bg-background">
         <div className="flex items-center justify-around gap-4 h-18 relative w-full md:px-8">
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 h-full">
             <Navbar />
           </div>
           <h1 className="order-2 md:order-1 text-3xl font-bold flex-1 text-center md:text-left md:flex-none">
