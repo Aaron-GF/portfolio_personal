@@ -3,17 +3,17 @@ export const skills = [
     title: "Lenguajes",
     items: [
       {
-        src: "assets/icons/skills/html.png",
+        src: "icons/skills/html.png",
         alt: "icono html",
         title: "HTML",
       },
       {
-        src: "assets/icons/skills/css.png",
+        src: "icons/skills/css.png",
         alt: "icono css",
         title: "CSS",
       },
       {
-        src: "assets/icons/skills/js.png",
+        src: "icons/skills/js.png",
         alt: "icono javascript",
         title: "JavaScript",
       },
@@ -23,23 +23,23 @@ export const skills = [
     title: "Frameworks",
     items: [
       {
-        src: "assets/icons/skills/react.svg",
+        src: "icons/skills/react.svg",
         alt: "icono react",
         title: "React",
         className: "animate-[spin_12s_linear_infinite]",
       },
       {
-        src: "assets/icons/skills/tailwind-css.svg",
+        src: "icons/skills/tailwind-css.svg",
         alt: "icono tailwind",
         title: "Tailwind CSS",
       },
       {
-        src: "assets/icons/skills/next.js-wb.png",
+        src: "icons/skills/next.js-wb.png",
         alt: "icono next",
         title: "Next.js",
       },
       {
-        src: "assets/icons/skills/redux.png",
+        src: "icons/skills/redux.png",
         alt: "icono redux",
         title: "Redux",
       },
@@ -49,12 +49,12 @@ export const skills = [
     title: "Testing",
     items: [
       {
-        src: "assets/icons/skills/jest.svg",
+        src: "icons/skills/jest.svg",
         alt: "icono jest",
         title: "Jest",
       },
       {
-        src: "assets/icons/skills/react-testing-library.svg",
+        src: "icons/skills/react-testing-library.svg",
         alt: "icono react testing library",
         title: "React Testing Library",
       },
@@ -64,27 +64,27 @@ export const skills = [
     title: "Herramientas",
     items: [
       {
-        src: "assets/icons/skills/git.png",
+        src: "icons/skills/git.png",
         alt: "icono git",
         title: "Git",
       },
       {
-        src: "assets/icons/skills/github.png",
+        src: "icons/skills/github.png",
         alt: "icono github",
         title: "GitHub",
       },
       {
-        src: "assets/icons/skills/vite.png",
+        src: "icons/skills/vite.png",
         alt: "icono vite",
         title: "Vite",
       },
       {
-        src: "assets/icons/skills/vscode.png",
+        src: "icons/skills/vscode.png",
         alt: "icono vscode",
         title: "VSCode",
       },
       {
-        src: "assets/icons/skills/nodejs.svg",
+        src: "icons/skills/nodejs.svg",
         alt: "icono node",
         title: "Node.js",
       },
