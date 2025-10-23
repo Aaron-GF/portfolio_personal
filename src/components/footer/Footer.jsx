@@ -1,7 +1,9 @@
+import Ratings from "./Ratings";
+
 export default function Footer() {
   return (
-    <footer className="flex justify-around items-center h-30">
-      <small className="my-auto">Copyright &copy; 2025 Aaron-GF</small>
+    <footer className="flex justify-around items-center h-100 bg-gradient-to-b from-background to-secondary/30">
+      <Ratings />
       <a
         href="#Hero"
         aria-label="Volver arriba"

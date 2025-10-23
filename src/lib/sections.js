@@ -4,4 +4,5 @@ export const SECTIONS = [
   { id: "Skills", label: "Tecnologías" },
   { id: "Projects", label: "Proyectos" },
   { id: "Contact", label: "Contacto" },
+  { id: "Ratings", label: "Valoraciones" },
 ];
