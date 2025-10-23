@@ -12,8 +12,6 @@
     
 # Personal Porfolio
     
-## Screenshot
-    
 ![](public/assets/images/screenshot.png)
 </div>
 
