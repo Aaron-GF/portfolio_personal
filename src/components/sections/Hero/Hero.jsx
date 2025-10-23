@@ -49,9 +49,9 @@ export default function Hero() {
       <div className="bg-gradient-to-t from-background to-secondary rounded-full shadow-md shadow-primary animate-fade-in">
         <img
           src="assets/images/me.webp"
-          className="size-50 md:size-60 rounded-full mask-radial-at-top mask-radial-from-70% mask-radial-to-80% mask-b-from-70%"
+          className="w-50 md:w-55 rounded-full mask-radial-at-top mask-radial-from-70% mask-radial-to-80% mask-b-from-70%"
           alt="Imagen perfil Aarón"
-          fetchPriority="high"
+          fetchPriority="high" // Prioriza la carga de la imagen para mejorar el rendimiento
         />
       </div>
       <div className="flex flex-col justify-center">

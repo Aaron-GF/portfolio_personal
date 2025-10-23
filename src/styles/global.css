@@ -1,15 +1,15 @@
 /* fuente Poppins */
 @font-face {
-  font-family: 'Poppins';
-  src: url('/assets/fonts/Poppins/Poppins-Regular.woff2') format('woff2');
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/assets/fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -75,7 +75,8 @@ body {
 }
 
 /* globales */
-button, a {
+button,
+a {
   @apply cursor-pointer;
 }
 
@@ -85,7 +86,10 @@ button, a {
 }
 
 /* secciones */
-section#Projects, section#Contact, section#About, section#Skills {
+section#Projects,
+section#Contact,
+section#About,
+section#Skills {
   @apply flex flex-col justify-center h-full md:h-screen w-full max-w-11/12 xl:max-w-9/12 md:mb-0 mb-20;
 }
 
@@ -107,5 +111,3 @@ form input,
 form textarea {
   @apply shadow-xs bg-input border border-ring text-sm rounded-sm focus:ring-1 focus:ring-primary focus:border-primary block w-full p-2.5 outline-none;
 }
-
-
