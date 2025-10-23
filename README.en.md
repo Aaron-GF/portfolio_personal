@@ -14,7 +14,7 @@
     
 ## Screenshot
     
-![](public/assets/image/screenshot.png)
+![](public/assets/images/screenshot.png)
 </div>
 
 ## Links
