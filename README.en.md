@@ -1,17 +1,26 @@
+<a href="./README.md">
+    <img src="https://flagcdn.com/es.svg" alt="🇪🇸" height="24" />
+    <img src="https://img.shields.io/badge/ES-gray?style=for-the-badge" alt="Español" style="height: 24px; width: auto;" />
+ </a></br>
+
+  <a href="./README.en.md">
+    <img src="https://flagcdn.com/gb.svg" alt="🇬🇧" height="24" width="35px" />
+    <img src="https://img.shields.io/badge/GB-gray?style=for-the-badge" alt="English" style="height: 24px; width: auto;"  />
+  </a>
+
 <div align="center">
-[![🇪🇸](https://img.shields.io/badge/%F0%9F%87%AA%F0%9F%87%B8-Espa%C3%B1ol-red.svg)](./README.md)
-[![🇬🇧](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7-English-blue.svg)](./README.en.md)
-    # Portfolio Personal
     
-    ## Screenshot
+# Personal Porfolio
     
-    ![](./screenshot.png)
+## Screenshot
+    
+![](public/assets/image/screenshot.png)
 </div>
 
 ## Links
 
-- URL repository: [https://github.com/Aaron-GF/portfolio_personal.git](https://github.com/Aaron-GF/portfolio_personal.git)
-- URL deployment: [https://portfolio-dev-web-aaron-gf.vercel.app/](https://portfolio-dev-web-aaron-gf.vercel.app/)
+[![Código](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aaron-GF/portfolio_personal.git)
+[![Portfolio](https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white)](https://portfolio-dev-web-aaron-gf.vercel.app/)
 
 ## Features
 
