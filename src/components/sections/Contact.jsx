@@ -49,7 +49,7 @@ export default function Contact() {
 
       <form
         onSubmit={onSubmit}
-        className="relative flex flex-col justify-center gap-5 max-w-md w-full"
+        className="relative flex flex-col justify-center gap-5 max-w-md w-full drop-shadow-md"
       >
         <div>
           <label htmlFor="name">Nombre</label>

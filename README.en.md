@@ -1,51 +1,50 @@
 <div align="center">
 [![🇪🇸](https://img.shields.io/badge/%F0%9F%87%AA%F0%9F%87%B8-Espa%C3%B1ol-red.svg)](./README.md)
 [![🇬🇧](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7-English-blue.svg)](./README.en.md)
-
     # Portfolio Personal
-
+    
     ## Screenshot
-
+    
     ![](./screenshot.png)
 </div>
 
 ## Links
 
-- URL repositorio: [https://github.com/Aaron-GF/portfolio_personal.git](https://github.com/Aaron-GF/portfolio_personal.git)
-- URL despliegue: [https://portfolio-dev-web-aaron-gf.vercel.app/](https://portfolio-dev-web-aaron-gf.vercel.app/)
+- URL repository: [https://github.com/Aaron-GF/portfolio_personal.git](https://github.com/Aaron-GF/portfolio_personal.git)
+- URL deployment: [https://portfolio-dev-web-aaron-gf.vercel.app/](https://portfolio-dev-web-aaron-gf.vercel.app/)
 
-## Características
+## Features
 
 - Responsive
-- Animaciones
-- Formulario de contacto
-- Botones para copiar correo
-- Popover para mostrar el correo
+- Animations
+- Contact form
+- Copy email buttons
+- Popover to show email
 
-## Tecnologías utilizadas
+## Technologies used
 
-**Lenguajes:**
+**Languages:**
 
 - HTML
 - JavaScript
 
-**Frameworks y librerías:**
+**Frameworks and libraries:**
 
 - React
 - Tailwind CSS
 
-**Herramientas de desarrollo:**
+**Development tools:**
 
-- Vite (empaquetador)
-- pnpm (gestor de paquetes)
-- Windsurf (editor de código)
+- Vite (bundler)
+- pnpm (package manager)
+- Windsurf (code editor)
 
-**Entornos de desarrollo:**
+**Development environments:**
 
 - Windows
 - Node.js
 
-## Recursos y librerías externas
+## Resources and external libraries
 
 - [React](https://reactjs.org/)
 - [Vite](https://vite.dev/)

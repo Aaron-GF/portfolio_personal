@@ -8,11 +8,11 @@ export default function Skills() {
         {skills.map((category) => (
           <div
             key={category.title}
-            className="flex justify-center items-center md:gap-6 gap-4 bg-input rounded-lg relative w-9/10 max-w-100 min-h-45"
+            className="flex justify-center items-center md:gap-6 gap-4 bg-input rounded-lg relative w-9/10 max-w-100 min-h-45 drop-shadow-lg"
           >
             <h3 className="absolute top-6">{category.title}</h3>
             {category.items.map((item) => (
-              <div key={item.title} className="flex justify-center items-center relative group size-10 md:size-12">
+              <div key={item.title} className="flex justify-center items-center relative group size-10 md:size-12 drop-shadow-lg">
                 {/* imagen superpuesta para crear efecto brillo al pasar el ratón */}
                 <img
                   src={item.src}

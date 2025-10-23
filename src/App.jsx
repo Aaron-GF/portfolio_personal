@@ -63,7 +63,7 @@ export default function App() {
         <a
           href="#Hero"
           aria-label="Volver arriba"
-          className="flex justify-center items-center bg-primary size-10 rounded-sm animate-[bounce_2s_infinite]"
+          className="flex justify-center items-center bg-primary size-10 rounded-sm animate-[bounce_2s_infinite] drop-shadow-lg"
         >
           <svg
             viewBox="0 0 24 24"
