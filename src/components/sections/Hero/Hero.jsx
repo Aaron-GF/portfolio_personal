@@ -32,8 +32,8 @@ export default function Hero() {
   }, [theme]);
 
   const backgroundSrc = isDark
-    ? "assets/images/bg-hero-dark.png"
-    : "assets/images/bg-hero-light.png";
+    ? "images/bg-hero-dark.png"
+    : "images/bg-hero-light.png";
 
   return (
     <section
