@@ -32,60 +32,40 @@ export default function Ratings() {
   const [isLoading, setIsLoading] = useState(true);
   const [fingerprint, setFingerprint] = useState(null);
 
+  // --------- Sincronización del voto entre localStorage y Supabase ---------
   useEffect(() => {
-    initFingerprint(); // ← CAMBIADO: primero obtener fingerprint
-  }, []);
-
-  // ← NUEVO: Función para obtener fingerprint
-  const initFingerprint = async () => {
-    try {
-      // Verificar localStorage primero (optimización)
-      if (localStorage.getItem("hasVoted") === "true") {
-        setHasVoted(true);
-        setIsLoading(false);
-        return;
+    async function syncVoto() {
+      // Obtener fingerprint (cachear en localStorage para rendimiento)
+      let visitorId = localStorage.getItem("fp");
+      if (!visitorId) {
+        const fp = await FingerprintJS.load();
+        const result = await fp.get();
+        visitorId = result.visitorId;
+        localStorage.setItem("fp", visitorId);
       }
-
-      // Generar fingerprint del navegador
-      const fp = await FingerprintJS.load();
-      const result = await fp.get();
-      const visitorId = result.visitorId;
-
       setFingerprint(visitorId);
-      await checkIfVoted(visitorId);
-    } catch (error) {
-      console.error("Error al obtener fingerprint:", error);
-      setIsLoading(false);
-    }
-  };
 
-  // ← MODIFICADO: Ahora recibe fingerprint como parámetro
-  const checkIfVoted = async (fp) => {
-    try {
-      const { data, error } = await supabase
+      // SIEMPRE consulta la BD: recupera el voto actual por fingerprint
+      const { data } = await supabase
         .from("ratings")
         .select("rating")
-        .eq("fingerprint", fp) // ← CAMBIADO: usa fingerprint en vez de user_id
-        .maybeSingle(); // ← CAMBIADO: maybeSingle() en vez de single()
-
-      if (error && error.code !== "PGRST116") {
-        console.error("Error verificando voto:", error);
-        return;
-      }
+        .eq("fingerprint", visitorId)
+        .maybeSingle();
 
       if (data) {
         setHasVoted(true);
         setRating(data.rating);
-        localStorage.setItem("hasVoted", "true"); // Guardar en localStorage también
+        localStorage.setItem("hasVoted", "true");
+      } else {
+        setHasVoted(false);
+        setRating(0);
+        localStorage.removeItem("hasVoted");
       }
-    } catch (error) {
-      console.error("Error:", error);
-    } finally {
       setIsLoading(false);
     }
-  };
+    syncVoto();
+  }, []);
 
-  // ← MODIFICADO: Usa fingerprint en vez de user_id
   const handleRating = async (selectedRating) => {
     if (hasVoted || isLoading || !fingerprint) return;
 
@@ -93,14 +73,12 @@ export default function Ratings() {
 
     try {
       const { error } = await supabase.from("ratings").insert({
-        // ← CAMBIADO: insert en vez de upsert
-        fingerprint: fingerprint, // ← CAMBIADO: usa fingerprint
+        fingerprint,
         rating: selectedRating,
         created_at: new Date().toISOString(),
       });
 
       if (error) {
-        // Si es error de duplicado (ya votó)
         if (error.code === "23505") {
           alert("Ya has votado anteriormente");
           setHasVoted(true);
@@ -122,10 +100,7 @@ export default function Ratings() {
   };
 
   return (
-    <section
-      id="Ratings"
-      className="flex flex-col justify-center items-center w-full h-100"
-    >
+    <section id="Ratings" className="flex flex-col justify-center items-center w-full h-100">
       <div className="flex flex-col items-center justify-center gap-2 bg-input shadow-md w-full h-50">
         {isLoading && <Spinner />}
         {!isLoading && (
@@ -155,9 +130,7 @@ export default function Ratings() {
             </div>
             <p className="text-sm">
               {hasVoted && rating
-                ? `Has valorado con ${rating} ${
-                    rating === 1 ? "estrella" : "estrellas"
-                  }`
+                ? `Has valorado con ${rating} ${rating === 1 ? "estrella" : "estrellas"}`
                 : !rating && hasVoted
                 ? "Ya has valorado anteriormente"
                 : "Haz clic en una estrella para votar"}
