@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SocialLinks from "@/components/sections/heroo/SocialLinks";
+import SocialLinks from "@/components/sections/hero/SocialLinks";
 import { useTheme } from "@/providers/ThemeProvider";
 
 export default function Hero() {
