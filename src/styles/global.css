@@ -38,6 +38,7 @@ body {
     var(--secondary) 0%,
     var(--background) 4%
   );
+  min-height: 100dvh;
 }
 
 @theme inline {

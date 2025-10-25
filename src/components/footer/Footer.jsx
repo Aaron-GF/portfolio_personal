@@ -2,11 +2,12 @@ import Ratings from "./RatingStats";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-around items-center flex-col md:flex-row gap-2 md:items-end h-80 bg-gradient-to-b from-background to-secondary/30 ">
+    <footer className="flex justify-around items-center flex-col md:flex-row gap-2 h-60 bg-gradient-to-b from-background to-secondary/30">
       <Ratings />
       <a
         href="#Hero"
-        aria-label="Volver arriba"
+        aria-label="Volver al inicio"
+        title="Volver al inicio"
         className="flex justify-center items-center bg-primary size-10 rounded-sm animate-[bounce_2s_infinite] drop-shadow-lg"
       >
         <svg

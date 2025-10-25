@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="flex flex-col justify-center items-center w-full">
+      <main className="flex flex-col justify-center items-center w-full h-auto">
         <Hero />
         <About />
         <Skills />

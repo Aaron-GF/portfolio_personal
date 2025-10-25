@@ -11,6 +11,7 @@ export default function SocialLinks() {
         className="social-btn"
         rel="noopener noreferrer"
         aria-label="Enlace a LinkedIn"
+        title="Perfil de LinkedIn"
       >
         <svg
           viewBox="0 0 24 24"
@@ -32,6 +33,7 @@ export default function SocialLinks() {
         className="social-btn"
         rel="noopener noreferrer"
         aria-label="Enlace a GitHub"
+        title="Perfil de GitHub"
       >
         <svg
           viewBox="0 0 24 24"

@@ -107,12 +107,12 @@ export default function RatingStats() {
     );
   }
 
-  // ← NUEVO: Mostrar mensaje cuando no hay votos
+  // Mensaje para mostrar cuando no hay valoraciones
   if (totalVotes === 0) {
     return (
       <div className="flex flex-col items-center justify-center p-6 w-80 text-center">
-        <p className="text-gray-500 mb-2">Aún no hay valoraciones</p>
-        <p className="text-sm text-gray-400">¡Sé el primero en votar!</p>
+        <p className="text-primary">Aún no hay valoraciones</p>
+        <p className="text-sm">¡Sé el primero en votar!</p>
       </div>
     );
   }
@@ -142,7 +142,7 @@ export default function RatingStats() {
             <span className="w-24 text-sm">{label}</span>
             <div className="flex-1 h-2.5 mx-4 bg-border rounded-full overflow-hidden">
               <div 
-                className="h-full bg-primary rounded-full transition-all duration-500 ease-out" // ← Añadido transition
+                className="h-full bg-primary rounded-full transition-all duration-500 ease-out" 
                 style={{ width: `${percentage}%` }}
               />
             </div>
