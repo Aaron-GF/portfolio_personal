@@ -1,4 +1,4 @@
-import CopyMailBtn from "@/components/sections/Hero/CopyMailBtn";
+import CopyMailBtn from "@/components/sections/hero/CopyMailBtn";
 
 export default function SocialLinks() {
   return (

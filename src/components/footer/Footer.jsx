@@ -1,4 +1,4 @@
-import Ratings from "./Ratings";
+import Ratings from "./RatingStats";
 
 export default function Footer() {
   return (
