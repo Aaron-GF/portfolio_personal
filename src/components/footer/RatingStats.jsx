@@ -1,3 +1,4 @@
+// components/RatingStats.jsx
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 
@@ -33,6 +34,29 @@ export default function RatingStats() {
 
   useEffect(() => {
     fetchRatings();
+
+    // ← NUEVO: Suscripción en tiempo real
+    // Se actualiza automáticamente cuando alguien vota
+    const subscription = supabase
+      .channel('ratings_changes')
+      .on(
+        'postgres_changes',
+        { 
+          event: 'INSERT', 
+          schema: 'public', 
+          table: 'ratings' 
+        },
+        () => {
+          console.log('📊 Nuevo voto recibido, actualizando estadísticas...');
+          fetchRatings();
+        }
+      )
+      .subscribe();
+
+    // Cleanup: desuscribirse al desmontar el componente
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   const fetchRatings = async () => {
@@ -51,8 +75,9 @@ export default function RatingStats() {
         setTotalVotes(ratings.length);
 
         // Calcular distribución de estrellas
+        // ← MEJORADO: Usar el rating exacto, no redondeado
         const summary = [5, 4, 3, 2, 1].map(star => {
-          const count = ratings.filter(r => Math.round(r.rating) === star).length;
+          const count = ratings.filter(r => r.rating === star).length; // ← Sin Math.round()
           const percentage = Math.round((count / ratings.length) * 100) || 0;
           return {
             label: `${star} ${star === 1 ? 'estrella' : 'estrellas'}`,
@@ -62,6 +87,10 @@ export default function RatingStats() {
         });
         
         setRatingsSummary(summary);
+      } else {
+        // ← NUEVO: Manejo cuando no hay votos
+        setAverageRating(0);
+        setTotalVotes(0);
       }
     } catch (error) {
       console.error('Error al cargar las valoraciones:', error);
@@ -74,6 +103,16 @@ export default function RatingStats() {
     return (
       <div className="flex items-center justify-center p-4 w-80">
         <div className="animate-pulse text-gray-500">Cargando estadísticas...</div>
+      </div>
+    );
+  }
+
+  // ← NUEVO: Mostrar mensaje cuando no hay votos
+  if (totalVotes === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center p-6 w-80 text-center">
+        <p className="text-gray-500 mb-2">Aún no hay valoraciones</p>
+        <p className="text-sm text-gray-400">¡Sé el primero en votar!</p>
       </div>
     );
   }
@@ -101,13 +140,13 @@ export default function RatingStats() {
         {ratingsSummary.map(({ label, percentage, count }, index) => (
           <div key={index} className="flex items-center">
             <span className="w-24 text-sm">{label}</span>
-            <div className="flex-1 h-2.5 mx-4 bg-border rounded-full drop-shadow-md">
+            <div className="flex-1 h-2.5 mx-4 bg-border rounded-full overflow-hidden">
               <div 
-              className="h-5 bg-primary rounded-sm"
+                className="h-full bg-primary rounded-full transition-all duration-500 ease-out" // ← Añadido transition
                 style={{ width: `${percentage}%` }}
               />
             </div>
-          <span className="w-10 text-center">{percentage}%</span>
+            <span className="w-12 text-center text-sm">{percentage}%</span>
           </div>
         ))}
       </div>

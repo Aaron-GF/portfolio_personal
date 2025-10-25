@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@eslint/js': ^9.33.0
+  '@fingerprintjs/fingerprintjs': ^5.0.1
   '@midudev/tailwind-animations': ^0.2.0
   '@radix-ui/react-dropdown-menu': ^2.1.16
   '@radix-ui/react-slot': ^1.2.3
@@ -25,6 +26,7 @@ specifiers:
   vite: ^7.1.2
 
 dependencies:
+  '@fingerprintjs/fingerprintjs': 5.0.1
   '@midudev/tailwind-animations': 0.2.0_tailwindcss@4.1.14
   '@radix-ui/react-dropdown-menu': 2.1.16_q7nfvcbprsnxoiavx3opj4v5aa
   '@radix-ui/react-slot': 1.2.3_gvgfeu4lazsckza3ypyort3p6e
@@ -510,6 +512,10 @@ packages:
       '@eslint/core': 0.16.0
       levn: 0.4.1
     dev: true
+
+  /@fingerprintjs/fingerprintjs/5.0.1:
+    resolution: {integrity: sha512-KbaeE/rk2WL8MfpRP6jTI4lSr42SJPjvkyrjP3QU6uUDkOMWWYC2Ts1sNSYcegHC8avzOoYTHBj+2fTqvZWQBA==}
+    dev: false
 
   /@floating-ui/core/1.7.3:
     resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}

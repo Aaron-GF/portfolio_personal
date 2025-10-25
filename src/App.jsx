@@ -10,7 +10,6 @@ import Ratings from "@/components/sections/Ratings";
 
 import Footer from "@/components/footer/Footer";
 
-
 export default function App() {
   return (
     <>

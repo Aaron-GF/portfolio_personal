@@ -4,11 +4,11 @@ export default function Skills() {
   return (
     <section id="Skills">
       <h2>Tecnologías</h2>
-      <div className="flex justify-center items-center flex-wrap gap-5">
+      <div className="grid md:grid-cols-2 grid-rows-2 gap-5">
         {skills.map((category) => (
           <div
             key={category.title}
-            className="flex justify-center items-center md:gap-6 gap-4 bg-input rounded-lg relative w-9/10 max-w-100 min-h-45 drop-shadow-lg"
+            className="flex justify-center items-center md:gap-6 gap-4 bg-input rounded-lg relative min-h-45 drop-shadow-lg"
           >
             <h3 className="absolute top-6">{category.title}</h3>
             {category.items.map((item) => (
