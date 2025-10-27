@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import Navbar from "@/components/header/Navbar";
 import ScrollProgressBar from "@/components/header/ScrollProgressBar";
@@ -6,7 +5,7 @@ import ScrollProgressBar from "@/components/header/ScrollProgressBar";
 export default function Header() {
   return (
     <header className="fixed top-0 z-20 w-full bg-background">
-      <div className="flex items-center justify-around gap-4 h-18 relative w-full md:px-8">
+      <div className="flex items-center justify-around h-18 relative w-full">
         <div className="order-1 md:order-2 h-full">
           <Navbar />
         </div>

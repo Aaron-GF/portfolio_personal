@@ -29,46 +29,70 @@ export default function Navbar() {
   return (
     <nav className="relative flex items-center h-full">
       <button
-        className="flex items-center justify-center size-10 rounded-md hover:bg-input/70 md:hidden"
+        className="flex items-center justify-center size-10 rounded-md hover:bg-input/70 md:hidden ml-3"
         aria-label="Abrir menú"
         aria-expanded={isMenuOpen}
         onClick={() => setIsMenuOpen((prev) => !prev)}
       >
-        <svg
-          className="size-5"
-          aria-hidden="true"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
-          <path
+        {!isMenuOpen ? (
+          <svg
+            className="size-5"
+            aria-hidden="true"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        ) : (
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
             stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2"
-            d="M1 1h15M1 7h15M1 13h15"
-          />
-        </svg>
+            className="size-7 animate-rotate-in animate-duration-normal"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        )}
       </button>
 
       <ul
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } md:flex md:size-full md:space-x-6 flex-col md:flex-row absolute md:static left-0 top-18 md:w-auto bg-background md:bg-transparent shadow-lg md:shadow-none border border-input md:border-0 md:rounded-none z-30 w-screen`}
+        className={`
+          ${isMenuOpen ? "flex" : "hidden"}
+          absolute left-0 top-18 z-30 w-screen
+          flex-col justify-around h-70
+          bg-background shadow-lg border border-input
+          md:static md:flex md:size-full 
+          md:flex-row 
+          md:bg-transparent md:shadow-none md:border-0 md:rounded-none
+        `}
       >
         {SECTIONS.map(({ id, label }) => (
           <li
             key={id}
-            className="flex items-center md:justify-center md:px-0 h-full md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-30"
+            className="flex items-center size-full md:justify-center md:px-0 md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-32"
           >
             <a
               href={`#${id}`}
               aria-label={label}
               onClick={() => setIsMenuOpen(false)}
-              className={
-                active === id
-                  ? "flex items-center md:justify-center text-primary font-semibold size-full"
-                  : "flex items-center md:justify-center text-foreground size-full hover:text-primary"
-              }
+              className={`
+                flex items-center md:justify-center size-full ml-4 md:ml-0
+                ${
+                  active === id
+                    ? "text-primary font-semibold"
+                    : "text-foreground hover:text-primary"
+                }
+              `}
             >
               {label}
             </a>
