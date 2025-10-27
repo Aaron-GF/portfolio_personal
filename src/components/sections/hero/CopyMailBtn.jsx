@@ -13,7 +13,7 @@ export default function CopyBtn() {
     <>
       {/* boton para copiar correo */}
       <button
-        className="social-btn"
+        className="social-btn animate-slide-up-fade animate-delay-100"
         aria-label="Copiar correo"
         data-popover-target="popover-bottom"
         data-popover-placement="bottom"
@@ -26,7 +26,7 @@ export default function CopyBtn() {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            className="lucide lucide-mail-icon lucide-mail size-6"
+            className="size-6"
           >
             <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
             <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -40,7 +40,7 @@ export default function CopyBtn() {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            className="lucide lucide-check-check-icon lucide-check-check size-6"
+            className="size-6"
           >
             <path d="M18 6 7 17l-5-5" />
             <path d="m22 10-7.5 7.5L13 16" />

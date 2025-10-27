@@ -31,6 +31,8 @@ export default function Ratings() {
                   key={star}
                   type="button"
                   className="focus:outline-none"
+                  title={`Valorar con ${star} estrellas`}
+                  aria-label={`Valorar con ${star} estrellas`}
                   onClick={() => vote(star)}
                   onMouseEnter={() => !hasVoted && setHover(star)}
                   onMouseLeave={() => !hasVoted && setHover(0)}

@@ -10,6 +10,7 @@ specifiers:
   '@tailwindcss/vite': ^4.1.13
   '@types/react': ^19.1.10
   '@types/react-dom': ^19.1.7
+  '@vercel/analytics': ^1.5.0
   '@vitejs/plugin-react': ^5.0.0
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
@@ -32,6 +33,7 @@ dependencies:
   '@radix-ui/react-slot': 1.2.3_gvgfeu4lazsckza3ypyort3p6e
   '@supabase/supabase-js': 2.76.1
   '@tailwindcss/vite': 4.1.14_vite@7.1.9
+  '@vercel/analytics': 1.5.0_react@19.2.0
   class-variance-authority: 0.7.1
   clsx: 2.1.1
   flowbite: 3.1.2
@@ -1543,6 +1545,35 @@ packages:
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
     dependencies:
       '@types/node': 24.9.1
+    dev: false
+
+  /@vercel/analytics/1.5.0_react@19.2.0:
+    resolution: {integrity: sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      react: 19.2.0
     dev: false
 
   /@vitejs/plugin-react/5.0.4_vite@7.1.9:

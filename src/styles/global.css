@@ -3,7 +3,7 @@
   font-family: "Poppins";
   src: url("/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
   font-display: swap;
 }
 
@@ -53,8 +53,8 @@ body {
 :root {
   --background: #f7f9fc;
   --foreground: #1f2933;
-  --primary: #2563eb;
-  --secondary: #60a5fa;
+  --primary: #60a5fa;
+  --secondary: #2563eb;
 
   --border: #d1d5db;
   --input: #e5e7eb;
@@ -78,9 +78,9 @@ a {
   @apply cursor-pointer;
 }
 
-/* barra de desplazamiento(no esta visible) */
+/* barra de desplazamiento(no visible) */
 ::-webkit-scrollbar {
-  @apply hidden;
+  display: none;
 }
 
 /* secciones */
@@ -92,7 +92,7 @@ section#Skills {
 }
 
 h2 {
-  @apply text-2xl font-bold text-secondary mb-5;
+  @apply text-2xl font-bold text-secondary mb-6;
 }
 
 h3 {
@@ -101,7 +101,7 @@ h3 {
 
 /* botones de las redes sociales */
 .social-btn {
-  @apply text-primary hover:text-background transition-colors border border-primary hover:bg-primary active:scale-95 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mt-5;
+  @apply inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary hover:text-background active:scale-95 transition-colors duration-200 me-2 mb-2 mt-5;
 }
 
 /* entradas para el formulario */
