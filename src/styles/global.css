@@ -27,15 +27,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  list-style: none;
-  text-decoration: none;
-  color: var(--color-foreground);
-  background: linear-gradient(
-    to bottom,
-    var(--secondary) 0%,
-    var(--background) 4%
-  );
-  min-height: 100dvh;
+  @apply list-none no-underline min-h-screen bg-background text-foreground;
 }
 
 @theme inline {

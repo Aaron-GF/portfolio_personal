@@ -52,7 +52,7 @@ export default function Ratings() {
                   }`
                 : !rating && hasVoted
                 ? "Ya has valorado anteriormente"
-                : "Haz clic en una estrella para votar"}
+                : "Selecciona una estrella para votar"}
             </p>
           </>
         )}

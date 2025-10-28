@@ -2,18 +2,20 @@ import { useEffect, useState, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
 
 export function useRatings(fingerprint) {
-  const [rating, setRating] = useState(0);
-  const [hasVoted, setHasVoted] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [averageRating, setAverageRating] = useState(0);
-  const [totalVotes, setTotalVotes] = useState(0);
-  const [ratingsSummary, setRatingsSummary] = useState([
+  const initialRatingSummary = [
     { label: "5 estrellas", percentage: 0, count: 0 },
     { label: "4 estrellas", percentage: 0, count: 0 },
     { label: "3 estrellas", percentage: 0, count: 0 },
     { label: "2 estrellas", percentage: 0, count: 0 },
     { label: "1 estrella", percentage: 0, count: 0 },
-  ]);
+  ];
+
+  const [rating, setRating] = useState(0);
+  const [hasVoted, setHasVoted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [averageRating, setAverageRating] = useState(0);
+  const [totalVotes, setTotalVotes] = useState(0);
+  const [ratingsSummary, setRatingsSummary] = useState(initialRatingSummary);
 
   useEffect(() => {
     if (!fingerprint) return;
@@ -55,13 +57,7 @@ export function useRatings(fingerprint) {
     } else {
       setAverageRating(0);
       setTotalVotes(0);
-      setRatingsSummary([
-        { label: "5 estrellas", percentage: 0, count: 0 },
-        { label: "4 estrellas", percentage: 0, count: 0 },
-        { label: "3 estrellas", percentage: 0, count: 0 },
-        { label: "2 estrellas", percentage: 0, count: 0 },
-        { label: "1 estrella", percentage: 0, count: 0 },
-      ]);
+      setRatingsSummary(initialRatingSummary);
     }
   }, []);
 
@@ -84,7 +80,6 @@ export function useRatings(fingerprint) {
     setRating(newRating);
     setHasVoted(true);
     setIsLoading(false);
-    fetchRatingsStats();
     return true;
   }
 

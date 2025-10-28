@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section
       id="Hero"
-      className="relative flex items-center md:flex-row flex-col md:justify-evenly md:gap-0 gap-10 justify-center h-screen w-full overflow-hidden"
+      className="relative flex items-center md:flex-row flex-col md:justify-evenly md:gap-0 gap-10 justify-center h-screen w-full overflow-hidden bg-gradient-to-t from-transparent to-secondary/20"
     >
       <img
         src={backgroundSrc}
@@ -57,8 +57,9 @@ export default function Hero() {
         />
       </div>
       <div className="flex flex-col justify-center">
+        <p className="text-xl">Hola, soy</p>
         <p className="text-3xl font-semibold text-secondary">Aarón García</p>
-        <p className="text-xl">Desarrollador Web Frontend</p>
+        <p className="text-xl">Aspirante a Desarrollador Web</p>
         <SocialLinks />
       </div>
     </section>
