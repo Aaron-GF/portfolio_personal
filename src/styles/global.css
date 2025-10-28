@@ -71,13 +71,17 @@ a {
 /* secciones */
 section#Projects,
 section#Contact,
-section#About,
 section#Skills {
-  @apply flex flex-col justify-center h-full md:h-screen w-full max-w-11/12 xl:max-w-9/12 md:mb-0 mb-20;
+  @apply flex flex-col justify-center min-h-auto md:min-h-[70vh] w-full max-w-[1200px] mx-auto px-4 md:px-6 mb-16 md:mb-24 scroll-mt-24;
 }
 
+/* titulos secciones */
 h2 {
-  @apply text-2xl font-bold text-secondary mb-6;
+  @apply text-2xl font-semibold text-secondary mb-6 flex items-center gap-3;
+}
+
+h2 span {
+  @apply w-1 h-8 bg-primary rounded;
 }
 
 h3 {

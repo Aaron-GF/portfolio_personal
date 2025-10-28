@@ -22,44 +22,38 @@
 
 ## Features
 
-- Responsive
-- Animations
-- Contact form
-- Copy email buttons
-- Popover to show email
+- Responsive design adapting to all devices.
+- Smooth and modern animations to enhance user experience.
+- Functional and accessible contact form.
+- Portfolio rating system with registration using Supabase for managing and storing votes.
+- Interactive popover to display the email discreetly and securely.
 
-## Technologies used
+---
 
-**Languages:**
+## Technologies and Tools Used
 
-- HTML
-- JavaScript
+- **Languages:** HTML, JavaScript.
+- **Frameworks and Libraries:** React, Tailwind CSS.
+- **Development Tools:** Vite (bundler), pnpm (package manager), Windsurf (code editor).
+- **Environments:** Windows, Node.js.
+- **External Services:**
+  - [Supabase](https://supabase.com/): backend and data management.
+  - [Vercel](https://vercel.com/): deployment and hosting.
+  - [FingerprintJS](https://fingerprint.com/): user identification for the rating system.
 
-**Frameworks and libraries:**
+---
 
-- React
-- Tailwind CSS
-
-**Development tools:**
-
-- Vite (bundler)
-- pnpm (package manager)
-- Windsurf (code editor)
-
-**Development environments:**
-
-- Windows
-- Node.js
-
-## Resources and external libraries
+## External Resources and Libraries
 
 - [React](https://reactjs.org/)
-- [Vite](https://vite.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Theme toggle](https://theme-toggle.rdsx.dev/)
-- [Web3Forms](https://web3forms.com/)
+- [Supabase](https://supabase.com/)
+- [Vercel](https://vercel.com/)
+- [FingerprintJS](https://fingerprint.com/)
+- [Google Fonts](https://fonts.google.com/)
 - [Flowbite](https://flowbite.com/)
 - [Lucide React](https://lucide.dev/)
 - [@midudev/tailwind-animations](https://tailwindcss-animations.vercel.app/)
-- [perplexity](https://perplexity.ai/)
-- [Google Fonts](https://fonts.google.com/)
+- [Web3Forms](https://web3forms.com/)
+- [Theme toggle](https://theme-toggle.rdsx.dev/)
+

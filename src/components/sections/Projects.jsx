@@ -2,62 +2,51 @@ import { projects } from "@/lib/projects.js";
 
 export default function Projects() {
   return (
-    <section id="Projects">
-      <h2>Proyectos</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6">
+    <section id="Projects" className="py-8 max-w-7xl mx-auto">
+      <h2>
+        <span />
+        Proyectos
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
         {projects.map((project, index) => (
-          <div
+          <article
             key={index}
-            className="relative group rounded-2xl overflow-hidden bg-gray-800 border-2 border-primary drop-shadow-secondary drop-shadow-md min-h-70 cursor-pointer"
+            className="bg-input rounded-lg shadow-lg overflow-hidden flex flex-col"
           >
-            <div className="size-full">
+            <div className="relative w-full h-48 md:h-56 lg:h-64">
               <img
                 src={project.image}
                 alt={project.title}
-                className="size-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-20"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+              <h3 className="absolute bottom-4 left-4 text-xl md:text-2xl font-semibold z-10">
+                {project.title}
+              </h3>
             </div>
-
-            {/* Overlay */}
-            <div className="absolute inset-0 flex flex-col justify-evenly items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-b from-transparent to-secondary px-2">
-              <h3 className="font-semibold text-xl">{project.title}</h3>
-              <p className="text-xs text-white max-w-19/20">
-                {project.description}
-              </p>
-
-              {/* tecnologias y herramientas usadas en el proyecto */}
-              <div className="flex flex-wrap justify-center gap-2 w-full">
+            <div className="p-5 flex flex-col flex-grow">
+              <p className="text-sm flex-grow mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-5">
                 {project.tools.map((tool, i) => (
                   <span
                     key={i}
-                    className="flex items-center justify-center bg-background text-primary font-semibold text-xs rounded-lg min-h-5 min-w-1/4"
+                    className="bg-background text-primary font-semibold text-xs rounded-full px-3 py-1"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
-
-              {/* Enlaces */}
-              <div className="flex gap-6">
+              <div className="flex gap-4 justify-center md:justify-start">
                 <a
                   href={project.links.demo}
                   title="Enlace a la demo del proyecto"
                   aria-label="Enlace a la demo del proyecto"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center size-9 rounded-full bg-background border border-secondary outline-2 outline-background text-primary hover:scale-110 transition-transform"
+                  className="bg-primary text-background px-4 py-2 rounded-lg font-semibold hover:bg-secondary transition"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="size-5"
-                  >
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14 21 3" />
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  </svg>
+                  Demo
                 </a>
                 <a
                   href={project.links.code}
@@ -65,23 +54,13 @@ export default function Projects() {
                   aria-label="Enlace al código del proyecto"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center size-9 rounded-full bg-background border border-secondary outline-2 outline-background text-primary hover:scale-110 transition-transform"
+                  className="bg-background text-primary px-4 py-2 rounded-lg font-semibold border border-primary hover:bg-primary hover:text-background transition"
                 >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="size-5"
-                  >
-                    <path d="m18 16 4-4-4-4" />
-                    <path d="m6 8-4 4 4 4" />
-                    <path d="m14.5 4-5 16" />
-                  </svg>
+                  Código
                 </a>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
