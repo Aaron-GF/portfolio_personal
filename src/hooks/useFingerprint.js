@@ -2,6 +2,15 @@
 import { useEffect, useState } from "react";
 import FingerprintJS from "@fingerprintjs/fingerprintjs";
 
+let fpPromise = null;
+
+function loadFingerprintJS() {
+  if (!fpPromise) {
+    fpPromise = FingerprintJS.load();
+  }
+  return fpPromise;
+}
+
 export function useFingerprint() {
   const [fingerprint, setFingerprint] = useState(null);
 
@@ -9,7 +18,7 @@ export function useFingerprint() {
     async function getFingerprint() {
       let visitorId = localStorage.getItem("fp"); // si ya existe un identificador, lo recupera
       if (!visitorId) {
-        const fp = await FingerprintJS.load(); // inicializa la librería
+        const fp = await loadFingerprintJS(); // inicializa la librería
         const result = await fp.get(); // obtiene el identificador
         visitorId = result.visitorId; // extrae el identificador único
         localStorage.setItem("fp", visitorId);
