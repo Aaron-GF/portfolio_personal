@@ -17,6 +17,8 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
+                width={500}
+                height={500}
                 className="object-cover"
                 loading="lazy"
               />
