@@ -7,7 +7,6 @@ import { Analytics } from "@vercel/analytics/react";
 // Globals css
 import "@/styles/global.css";
 import "@/styles/themeTransition.css";
-import "flowbite";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
