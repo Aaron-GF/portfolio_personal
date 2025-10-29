@@ -11,4 +11,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    emptyOutDir: true,  // limpia antes de desplegar
+    outDir: "dist",
+  },
 });
