@@ -1,11 +1,11 @@
 <a href="./README.md">
-    <img src="https://flagcdn.com/es.svg" alt="🇪🇸" height="24" />
+    <img src="https://flagcdn.com/es.svg" alt="ES" height="24" />
     <img src="https://img.shields.io/badge/ES-gray?style=for-the-badge" alt="Español" style="height: 24px; width: auto;" />
  </a></br>
 
   <a href="./README.en.md">
-    <img src="https://flagcdn.com/gb.svg" alt="🇬🇧" height="24" width="35px" />
-    <img src="https://img.shields.io/badge/GB-gray?style=for-the-badge" alt="English" style="height: 24px; width: auto;"  />
+    <img src="https://flagcdn.com/gb.svg" alt="EN" height="24" width="35px" />
+    <img src="https://img.shields.io/badge/EN-gray?style=for-the-badge" alt="English" style="height: 24px; width: auto;"  />
   </a>
 
 <div align="center">

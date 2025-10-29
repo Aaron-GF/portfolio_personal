@@ -13,11 +13,11 @@ export default function Projects() {
             key={index}
             className="bg-input rounded-lg shadow-lg overflow-hidden flex flex-col"
           >
-            <div className="relative w-full h-48 md:h-56 lg:h-64">
+            <div className="relative">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
