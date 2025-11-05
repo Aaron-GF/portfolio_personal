@@ -21,7 +21,7 @@ export default function About() {
       <div
         className={`flex flex-col py-2 px-4 bg-input ${rounded ? "rounded-2xl" : "rounded-e-2xl rounded-es-2xl"}`}
       >
-        <span className="text-sm text-ring">{currentTime}</span>
+        <span className="text-sm text-foreground/50">{currentTime}</span>
         <p className="py-2">{children}</p>
       </div>
     </div>
