@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section
       id="Hero"
-      className="relative flex items-center md:flex-row flex-col md:justify-evenly md:gap-0 gap-10 justify-center h-screen w-full overflow-hidden bg-gradient-to-t from-transparent to-secondary/20"
+      className="relative flex items-center md:flex-row flex-col md:justify-evenly md:gap-0 gap-15 justify-center h-screen w-full overflow-hidden bg-gradient-to-t from-transparent to-secondary/20"
     >
       <img
         src={backgroundSrc}

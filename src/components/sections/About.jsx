@@ -1,27 +1,72 @@
 export default function About() {
-  return (
-    <section
-      id="About"
-      className="w-full bg-input shadow-md p-8 flex flex-col md:min-h-[70vh] gap-6 md:gap-8 md:p-12 mb-16 md:mb-24 scroll-mt-24"
-    >
-      {/* Contenedor centrado y con ancho máximo */}
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 w-full">
-        <h2>
-          <span />
-          Sobre mí
-        </h2>
-        <div className="text-foreground space-y-5 text-base md:text-lg leading-relaxed">
-          <p>
-            Mi nombre es Aarón, desde hace tiempo me atrae el mundo de la programación y la tecnología. Aunque mi camino profesional inicial tomó otra dirección, siempre tuve presente mi interés como desarrollador. Hoy estoy enfocado en aprender y mejorar mis habilidades.
-          </p>
-          <p>
-            Práctico constantemente con cursos y proyectos personales, de momento enfocado en front-end y aprendizaje continuo de nuevas tecnologías. En esta web comparto los proyectos en los que trabajo, como reflejo de mi proceso de aprendizaje y crecimiento.
-          </p>
-          <p>
-            El sitio ha sido creado con Vite, React y TailwindCSS, siguiendo un diseño moderno y responsivo que se adapta a diferentes dispositivos. Cada detalle está pensado para mejorar funcionalidad, estética y rendimiento.
-          </p>
-        </div>
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, "0");
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+  const currentTime = `${hours}:${minutes}`;
+
+  const chatImage = (
+    <img
+      width={40}
+      height={40}
+      className="rounded-full"
+      src="/images/me.webp"
+      alt="imagen perfil formato chat"
+    />
+  );
+
+  /* visualización tipo bubble chat */
+  const ChatMessage = ({ children, image, ml, rounded, mt }) => (
+    <div className={`flex items-start gap-3 mb-2 ${ml ? "ml-13" : ""} ${mt ? "mt-3" : ""}`}>
+      {image && image}
+      <div
+        className={`flex flex-col py-2 px-4 bg-input ${rounded ? "rounded-2xl" : "rounded-e-2xl rounded-es-2xl"}`}
+      >
+        <span className="text-sm text-ring">{currentTime}</span>
+        <p className="py-2">{children}</p>
       </div>
+    </div>
+  );
+
+  return (
+    <section id="About">
+      <h2>
+        <span />
+        Sobre mí
+      </h2>
+
+      <ChatMessage image={chatImage} mt>
+        👋 Mi nombre es Aarón, desde hace tiempo me atrae el mundo de la
+        programación y la tecnología.
+      </ChatMessage>
+
+      <ChatMessage ml rounded>
+        Aunque mi camino profesional inicial tomó otra dirección, siempre tuve
+        presente mi interés como desarrollador.
+      </ChatMessage>
+
+      <ChatMessage ml rounded>
+        Hoy estoy enfocado en aprender y mejorar mis habilidades.
+      </ChatMessage>
+
+      <ChatMessage image={chatImage} mt>
+        Práctico constantemente con cursos y proyectos personales, de momento
+        enfocado en front-end y aprendizaje continuo de nuevas tecnologías.
+      </ChatMessage>
+
+      <ChatMessage ml rounded>
+        En esta web comparto los proyectos en los que trabajo, como reflejo de
+        mi proceso de aprendizaje y crecimiento.
+      </ChatMessage>
+
+      <ChatMessage image={chatImage} mt>
+        El sitio ha sido creado con Vite, React y TailwindCSS, siguiendo un
+        diseño moderno y responsivo que se adapta a diferentes dispositivos.
+      </ChatMessage>
+
+      <ChatMessage ml rounded>
+        Cada detalle está pensado para mejorar funcionalidad, estética y
+        rendimiento.
+      </ChatMessage>
     </section>
   );
 }

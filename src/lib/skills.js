@@ -17,6 +17,11 @@ export const skills = [
         alt: "icono javascript",
         title: "JavaScript",
       },
+      {
+        src: "icons/skills/ts.png",
+        alt: "icono typescript",
+        title: "TypeScript",
+      },
     ],
   },
   {

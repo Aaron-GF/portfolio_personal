@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className="relative flex items-center h-full">
       <button
-        className="flex items-center justify-center size-10 rounded-md hover:bg-input/70 md:hidden ml-3"
+        className="flex items-center justify-center size-10 rounded-md hover:bg-input/70 lg:hidden ml-3"
         aria-label="Abrir menú"
         aria-expanded={isMenuOpen}
         onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -71,22 +71,22 @@ export default function Navbar() {
           absolute left-0 top-18 z-30 w-screen
           flex-col justify-around h-70
           bg-background shadow-lg border border-input
-          md:static md:flex md:size-full 
-          md:flex-row 
-          md:bg-transparent md:shadow-none md:border-0 md:rounded-none
+          lg:static lg:flex lg:size-full 
+          lg:flex-row 
+          lg:bg-transparent lg:shadow-none lg:border-0 lg:rounded-none
         `}
       >
         {SECTIONS.map(({ id, label }) => (
           <li
             key={id}
-            className="flex items-center size-full md:justify-center md:px-0 md:py-0 hover:bg-input cursor-pointer hover:text-primary md:w-32"
+            className="flex items-center size-full lg:justify-center lg:px-0 lg:py-0 hover:bg-input cursor-pointer hover:text-primary lg:w-32"
           >
             <a
               href={`#${id}`}
               aria-label={label}
               onClick={() => setIsMenuOpen(false)}
               className={`
-                flex items-center md:justify-center size-full ml-4 md:ml-0
+                flex items-center lg:justify-center size-full ml-4 lg:ml-0
                 ${
                   active === id
                     ? "text-primary font-semibold"
