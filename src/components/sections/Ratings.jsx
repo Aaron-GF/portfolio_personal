@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { useFingerprint } from "@/hooks/useFingerprint";
 import { useRatings } from "@/hooks/useRatings";
@@ -7,12 +7,37 @@ import { StarIcon } from "@/components/ui/StarIcon";
 import { Spinner } from "@/components/ui/SendBtn";
 
 export default function Ratings() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const fingerprint = useFingerprint();
-  const { rating, hasVoted, isLoading, vote } = useRatings(fingerprint);
+  const { rating, hasVoted, isLoading, vote } = useRatings(
+    fingerprint,
+    isVisible
+  );
   const [hover, setHover] = useState(0);
 
   return (
     <section
+      ref={sectionRef}
       id="Ratings"
       className="flex flex-col justify-center items-center w-full h-100"
     >

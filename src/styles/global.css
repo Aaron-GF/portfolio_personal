@@ -37,8 +37,8 @@ body {
 :root {
   --background: #f7f9fc;
   --foreground: #1f2933;
-  --primary: #60a5fa;
-  --secondary: #2563eb;
+  --primary: #2563eb;
+  --secondary: #1e40af;
 
   --border: #d1d5db;
   --input: #e5e7eb;

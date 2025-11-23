@@ -42,8 +42,8 @@ export default function Projects() {
               <div className="flex gap-4 justify-center md:justify-start">
                 <a
                   href={project.links.demo}
-                  title="Enlace a la demo del proyecto"
-                  aria-label="Enlace a la demo del proyecto"
+                  title={`Demo del proyecto ${project.title}`}
+                  aria-label={`Demo del proyecto ${project.title}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-primary text-background px-4 py-2 rounded-lg font-semibold hover:bg-secondary transition"
@@ -52,8 +52,8 @@ export default function Projects() {
                 </a>
                 <a
                   href={project.links.code}
-                  title="Enlace al código del proyecto"
-                  aria-label="Enlace al código del proyecto"
+                  title={`Código del proyecto ${project.title}`}
+                  aria-label={`Código del proyecto ${project.title}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-background text-primary px-4 py-2 rounded-lg font-semibold border border-primary hover:bg-primary hover:text-background transition"

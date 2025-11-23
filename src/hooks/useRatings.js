@@ -9,7 +9,7 @@ const initialRatingSummary = [
   { label: "1 estrella", percentage: 0, count: 0 },
 ];
 
-export function useRatings(fingerprint) {
+export function useRatings(fingerprint, enabled = true) {
   const [rating, setRating] = useState(0);
   const [hasVoted, setHasVoted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,8 +18,10 @@ export function useRatings(fingerprint) {
   const [ratingsSummary, setRatingsSummary] = useState(initialRatingSummary);
 
   useEffect(() => {
-    if (!fingerprint) {
-      setIsLoading(false);
+    if (!fingerprint || !enabled) {
+      // Si no está habilitado, no hacemos nada (mantenemos loading true o lo que sea)
+      // Pero si fingerprint no está, isLoading false.
+      if (!fingerprint) setIsLoading(false);
       return;
     }
 
@@ -76,7 +78,7 @@ export function useRatings(fingerprint) {
     }
 
     fetchData();
-  }, [fingerprint]);
+  }, [fingerprint, enabled]);
 
   async function vote(newRating) {
     if (hasVoted || isLoading || !fingerprint) return false;
