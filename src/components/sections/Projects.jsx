@@ -22,13 +22,13 @@ export default function Projects() {
                 className="object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-70" />
               <h3 className="absolute bottom-4 left-4 text-xl md:text-2xl font-semibold z-10">
                 {project.title}
               </h3>
             </div>
-            <div className="p-5 flex flex-col flex-grow">
-              <p className="text-sm flex-grow mb-4">{project.description}</p>
+            <div className="p-5 flex flex-col grow">
+              <p className="text-sm grow mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {project.tools.map((tool, i) => (
                   <span
