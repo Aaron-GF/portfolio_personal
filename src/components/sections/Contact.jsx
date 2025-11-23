@@ -78,13 +78,26 @@ export default function Contact() {
             status === "loading" ? "opacity-80 cursor-not-allowed" : ""
           }`}
         >
-          {status === "loading" ? <Spinner /> : status === "success" ? <Sent /> : "Enviar"}
+          {status === "loading" ? (
+            <Spinner />
+          ) : status === "success" ? (
+            <Sent />
+          ) : (
+            "Enviar"
+          )}
         </button>
         {status === "error" && (
-          <p className={`text-sm font-medium absolute -bottom-10 text-red-500`}>
+          <p
+            role="alert"
+            className={`text-sm font-medium absolute -bottom-10 text-red-500`}
+          >
             {message}
           </p>
         )}
+        <div className="sr-only" aria-live="polite">
+          {status === "success" && "Mensaje enviado con éxito"}
+          {status === "error" && `Error: ${message}`}
+        </div>
       </form>
     </section>
   );

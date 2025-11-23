@@ -8,19 +8,6 @@
     <img src="https://img.shields.io/badge/EN-gray?style=for-the-badge" alt="English" style="height: 24px; width: auto;"  />
   </a>
 
-
-<div align="center">
-  
-# Portfolio Personal
-
-![](public/assets/images/screenshot.png)
-</div>
-
-## Enlaces
-
-[![Código](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aaron-GF/portfolio_personal.git)
-[![Portfolio](https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white)](https://portfolio-dev-web-aaron-gf.vercel.app/)
-
 ## Características
 
 - Diseño responsive adaptado a todos los dispositivos.

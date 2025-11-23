@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import SocialLinks from "@/components/sections/hero/SocialLinks";
-import { useTheme } from "@/providers/ThemeProvider";
+import { useTheme } from "@/providers/ThemeContext";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -32,8 +32,8 @@ export default function Hero() {
   }, [theme]);
 
   const backgroundSrc = isDark
-    ? "images/bg-hero-dark.png"
-    : "images/bg-hero-light.png";
+    ? "images/bg-hero-dark.webp"
+    : "images/bg-hero-light.webp";
 
   return (
     <section

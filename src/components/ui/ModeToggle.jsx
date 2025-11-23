@@ -1,4 +1,4 @@
-import { useTheme } from "@/providers/ThemeProvider";
+import { useTheme } from "@/providers/ThemeContext";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();

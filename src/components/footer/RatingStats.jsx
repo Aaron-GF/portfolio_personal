@@ -32,7 +32,7 @@ export default function RatingStats() {
       </div>
 
       <div className="mt-2 space-y-2">
-        {ratingsSummary.map(({ label, percentage, count }, index) => (
+        {ratingsSummary.map(({ label, percentage }, index) => (
           <div key={index} className="flex items-center">
             <span className="w-24 text-sm">{label}</span>
             <div className="flex-1 h-2.5 mx-4 bg-border rounded-full overflow-hidden">
