@@ -1,5 +1,16 @@
 export const projects = [
   {
+    title: "Filmix",
+    image: "images/projects/filmix/screen-capture.webp",
+    description:
+      "Aplicación web que permite explorar películas y series con buscador y diferentes filtros. Proporciona información sobre plataformas de streaming, calificaciones, resumen de la película o serie...",
+    links: {
+      demo: "https://filmix-aa.vercel.app/",
+      code: "https://github.com/Aaron-GF/films-app",
+    },
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "tmdb API"],
+  },
+  {
     title: "Juego de fútbol - Footdle",
     image: "images/projects/footdle-football-app/screen-capture.webp",
     description:

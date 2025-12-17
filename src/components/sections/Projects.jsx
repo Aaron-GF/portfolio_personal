@@ -23,9 +23,9 @@ export default function Projects() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-70" />
-              <h3 className="absolute bottom-4 left-4 text-xl md:text-2xl font-semibold z-10">
+              <span className="absolute bottom-4 left-4 text-xl md:text-2xl font-semibold z-10 text-ring drop-shadow-lg dark:text-primary">
                 {project.title}
-              </h3>
+              </span>
             </div>
             <div className="p-5 flex flex-col grow">
               <p className="text-sm grow mb-4">{project.description}</p>
