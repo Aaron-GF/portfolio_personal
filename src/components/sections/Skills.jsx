@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section id="Skills">
       <h2><span/>Tecnologías</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {skills.map((category) => (
           <div
             key={category.title}

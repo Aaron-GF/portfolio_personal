@@ -2,97 +2,33 @@ export const skills = [
   {
     title: "Lenguajes",
     items: [
-      {
-        src: "icons/skills/html.png",
-        alt: "icono html",
-        title: "HTML",
-      },
-      {
-        src: "icons/skills/css.png",
-        alt: "icono css",
-        title: "CSS",
-      },
-      {
-        src: "icons/skills/js.png",
-        alt: "icono javascript",
-        title: "JavaScript",
-      },
-      {
-        src: "icons/skills/ts.png",
-        alt: "icono typescript",
-        title: "TypeScript",
-      },
+      { src: "icons/TypeScript.svg", alt: "icono typescript", title: "TypeScript" },
+      { src: "icons/JavaScript.svg", alt: "icono javascript", title: "JavaScript" },
+      { src: "icons/Java-Dark.svg", alt: "icono java", title: "Java" },
+      { src: "icons/Bash-Dark.svg", alt: "icono bash", title: "Bash" },
+      { src: "icons/HTML.svg", alt: "icono html", title: "HTML" },
+      { src: "icons/CSS.svg", alt: "icono css", title: "CSS" },
     ],
   },
   {
-    title: "Frameworks",
+    title: "Frontend & Frameworks",
     items: [
-      {
-        src: "icons/skills/react.svg",
-        alt: "icono react",
-        title: "React",
-        className: "animate-[spin_12s_linear_infinite]",
-      },
-      {
-        src: "icons/skills/tailwind-css.svg",
-        alt: "icono tailwind",
-        title: "Tailwind CSS",
-      },
-      {
-        src: "icons/skills/next.js-wb.png",
-        alt: "icono next",
-        title: "Next.js",
-      },
-      {
-        src: "icons/skills/redux.png",
-        alt: "icono redux",
-        title: "Redux",
-      },
+      { src: "icons/NextJs-Dark.svg", alt: "icono next", title: "Next.js" },
+      { src: "icons/React-Dark.svg", alt: "icono react", title: "React" },
+      { src: "icons/TailwindCSS-Dark.svg", alt: "icono tailwind", title: "Tailwind CSS" },
+      { src: "icons/Redux.svg", alt: "icono redux", title: "Redux" },
     ],
   },
   {
-    title: "Testing",
+    title: "Backend & Herramientas",
     items: [
-      {
-        src: "icons/skills/jest.svg",
-        alt: "icono jest",
-        title: "Jest",
-      },
-      {
-        src: "icons/skills/react-testing-library.svg",
-        alt: "icono react testing library",
-        title: "React Testing Library",
-      },
-    ],
-  },
-  {
-    title: "Herramientas",
-    items: [
-      {
-        src: "icons/skills/git.png",
-        alt: "icono git",
-        title: "Git",
-      },
-      {
-        src: "icons/skills/github.png",
-        alt: "icono github",
-        title: "GitHub",
-      },
-      {
-        src: "icons/skills/vite.png",
-        alt: "icono vite",
-        title: "Vite",
-      },
-      {
-        src: "icons/skills/vscode.png",
-        alt: "icono vscode",
-        title: "VSCode",
-      },
-      {
-        src: "icons/skills/nodejs.svg",
-        alt: "icono node",
-        title: "Node.js",
-      },
+      { src: "icons/NodeJS-Dark.svg", alt: "icono node", title: "Node.js" },
+      { src: "icons/PostgreSQL-Dark.svg", alt: "icono postgres", title: "PostgreSQL" },
+      { src: "icons/SQL-Developer.svg", alt: "icono oracle", title: "Oracle SQL Developer" },
+      { src: "icons/Git.svg", alt: "icono git", title: "Git" },
+      { src: "icons/Github-Dark.svg", alt: "icono github", title: "GitHub" },
+      { src: "icons/VSCode-Dark.svg", alt: "icono vscode", title: "VSCode" },
+      { src: "icons/Pnpm-Dark.svg", alt: "icono pnpm", title: "pnpm" },
     ],
   },
 ];
