@@ -13,7 +13,7 @@ export const skills = [
   {
     title: "Frontend & Frameworks",
     items: [
-      { src: "icons/NextJs-Dark.svg", alt: "icono next", title: "Next.js" },
+      { src: "icons/NextJS-Dark.svg", alt: "icono next", title: "NextJS" },
       { src: "icons/React-Dark.svg", alt: "icono react", title: "React" },
       { src: "icons/TailwindCSS-Dark.svg", alt: "icono tailwind", title: "Tailwind CSS" },
       { src: "icons/Redux.svg", alt: "icono redux", title: "Redux" },
