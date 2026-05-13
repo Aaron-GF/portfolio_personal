@@ -45,7 +45,7 @@ export default function Ratings() {
         {isLoading && <Spinner />}
         {!isLoading && (
           <>
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-xl text-center font-bold mb-4">
               {hasVoted
                 ? "¡Gracias por tu valoración!"
                 : "¿Cómo valoras este portfolio?"}

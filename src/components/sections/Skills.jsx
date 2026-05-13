@@ -3,7 +3,10 @@ import { skills } from "@/lib/skills.js";
 export default function Skills() {
   return (
     <section id="Skills">
-      <h2><span/>Tecnologías</h2>
+      <h2>
+        <span />
+        Tecnologías
+      </h2>
       <div className="grid grid-cols-1 gap-8">
         {skills.map((category) => (
           <article
@@ -27,17 +30,15 @@ export default function Skills() {
                     <img
                       src={item.src}
                       alt={item.alt}
-                      loading="lazy" // Mejora de rendimiento
+                      loading="lazy"
                       width={55}
                       height={55}
-                      className={`z-10 filter grayscale opacity-70 transition-all duration-500 ease-out 
-    group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 
-    ${item.className ?? ""}`}
+                      className={`z-10 transition-all duration-500 ease-out md:grayscale opacity-100 scale-100 md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:scale-125 ${item.className ?? ""}`}
                     />
                   </div>
 
                   {/* Etiqueta de texto: aparece suavemente al hacer hover */}
-                  <span className="mt-2 text-[10px] font-medium text-muted-foreground opacity-0 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 text-center whitespace-nowrap">
+                  <span className="mt-2 text-[10px] font-medium text-muted-foreground transition-all duration-300 opacity-100 translate-y-0 md:opacity-0 md:translate-y-1 md:group-hover:opacity-100 md:group-hover:translate-y-0 text-center md:whitespace-nowrap">
                     {item.title}
                   </span>
                 </div>

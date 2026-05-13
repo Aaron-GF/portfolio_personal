@@ -4,63 +4,60 @@ import { useTheme } from "@/providers/ThemeContext";
 
 export default function Hero() {
   const { theme } = useTheme();
-  const prefersDark = () =>
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  const [isDark, setIsDark] = useState(
-    () => theme === "dark" || (theme === "system" && prefersDark())
-  );
+  
+  // Lógica del tema.
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") return true;
+    if (theme === "system") return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return theme === "dark";
+  });
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      setIsDark(theme === "dark");
-      return;
-    }
-
     if (theme === "system") {
-      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      const handleChange = (event) => setIsDark(event.matches);
-
-      setIsDark(mediaQuery.matches);
-      mediaQuery.addEventListener("change", handleChange);
-
-      return () => mediaQuery.removeEventListener("change", handleChange);
+      const media = window.matchMedia("(prefers-color-scheme: dark)");
+      const listener = (e) => setIsDark(e.matches);
+      setIsDark(media.matches);
+      media.addEventListener("change", listener);
+      return () => media.removeEventListener("change", listener);
     }
-
     setIsDark(theme === "dark");
   }, [theme]);
-
-  const backgroundSrc = isDark
-    ? "images/bg-hero-dark.webp"
-    : "images/bg-hero-light.webp";
 
   return (
     <section
       id="Hero"
-      className="relative flex items-center md:flex-row flex-col md:justify-evenly md:gap-0 gap-15 justify-center h-screen w-full overflow-hidden bg-gradient-to-t from-transparent to-secondary/20"
+      className="relative flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-10 md:gap-0 h-screen w-full mt-30 md:mt-10"
     >
-      <img
-        src={backgroundSrc}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 size-full object-cover opacity-30 -z-10"
-      />
-      <div className="bg-gradient-to-t from-background to-secondary rounded-full shadow-md shadow-primary animate-fade-in">
-        <img
-          src="images/me.webp"
-          width={230}
-          height={230}
-          className="rounded-full mask-radial-at-top mask-radial-from-70% mask-radial-to-80% mask-b-from-70%"
-          alt="Imagen perfil Aarón"
-          fetchPriority="high" // Prioriza la carga de la imagen para mejorar el rendimiento
-        />
+        {/* Contenedor de Imagen de Perfil */}
+      <div className="relative group">
+        {/* Efecto de resplandor de fondo */}
+        <div className="absolute -inset-1 bg-linear-to-r from-secondary to-primary rounded-full blur opacity-25 group-hover:opacity-50 transition animate-duration-[4000ms] animate-pulse"></div>
+        
+        <div className="relative bg-background rounded-full p-1 shadow-2xl animate-fade-in">
+          <img
+            src="images/me.webp"
+            width={230}
+            height={230}
+            className="rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+            alt="Aarón García"
+            fetchPriority="high"
+          />
+        </div>
       </div>
-      <div className="flex flex-col justify-center">
-        <p className="text-xl">Hola, soy</p>
-        <p className="text-3xl font-semibold text-secondary">Aarón García</p>
-        <p className="text-xl">Aspirante a Desarrollador Web</p>
-        <SocialLinks />
+
+      {/* Textos y Social */}
+      <div className="flex flex-col items-center md:items-start text-center md:text-left z-10">
+        <span className="text-xl font-light tracking-wide">Hola, soy</span>
+        <h1 className="text-2xl md:text-4xl font-bold text-secondary mt-1 mb-2 tracking-tight">
+          Aarón García
+        </h1>
+        <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-6">
+          Desarrollador Web
+        </p>
+        
+        <div className="animate-fade-in animate-delay-200">
+          <SocialLinks />
+        </div>
       </div>
     </section>
   );
