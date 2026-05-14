@@ -13,7 +13,7 @@ export default function About() {
     };
 
     updateTime();
-    // Opcional: Actualizar cada minuto por si el usuario se queda en la web
+    // Actualiza la hora cada minuto
     const timer = setInterval(updateTime, 60000);
     return () => clearInterval(timer);
   }, []);
@@ -23,7 +23,7 @@ export default function About() {
       <img
         width={40}
         height={40}
-        className="rounded-full object-cover shadow-md border border-white/10"
+        className="rounded-full object-cover shadow-md border border-white/10 size-8 md:size-10 2xl:size-12"
         src="/images/me.webp"
         alt="Aarón"
       />
@@ -35,19 +35,21 @@ export default function About() {
     </div>
   );
 
-  /* Componente interno para las burbujas de chat */
+  /* Componente interno para el chat estilo buble */
   const ChatMessage = ({ children, isFirst = false }) => (
     <div
-      className={`flex items-start gap-3 mb-2 ${isFirst ? "mt-6" : "ml-[52px]"}`}
+      className={`flex items-start gap-3 mb-2 ${isFirst ? "mt-6" : "ml-[54px] md:ml-[66px] 2xl:ml-[76px]"}`}
     >
-      {/* Solo mostramos la imagen si es el inicio de un bloque de mensajes */}
+      {/* Solo muestra la imagen si es el inicio de un bloque de mensajes */}
       {isFirst && <ChatAvatar />}
 
       <div
         className={`flex flex-col py-2 px-4 bg-input/80 backdrop-blur-sm border border-white/5 shadow-sm
           ${isFirst ? "rounded-e-2xl rounded-es-2xl" : "rounded-2xl"}`}
       >
-        <p className="text-sm leading-relaxed text-foreground/90">{children}</p>
+        <p className="text-sm md:text-base 2xl:text-lg leading-relaxed text-foreground/90">
+          {children}
+        </p>
         <span className="text-[10px] text-foreground/40 text-right font-mono">
           {currentTime}
         </span>
@@ -58,8 +60,7 @@ export default function About() {
   return (
     <section id="About" className="max-w-2xl mx-auto px-4 py-12">
       <h2 className="flex items-center gap-3 mb-8">
-        <span className="relative flex h-3 w-3">
-        </span>
+        <span className="relative flex h-3 w-3"></span>
         Sobre mí
       </h2>
 

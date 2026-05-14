@@ -4,11 +4,12 @@ import { useTheme } from "@/providers/ThemeContext";
 
 export default function Hero() {
   const { theme } = useTheme();
-  
-  // Lógica del tema.
+
+  // Lógica del tema optimizada
   const [isDark, setIsDark] = useState(() => {
     if (typeof window === "undefined") return true;
-    if (theme === "system") return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (theme === "system")
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
     return theme === "dark";
   });
 
@@ -26,19 +27,25 @@ export default function Hero() {
   return (
     <section
       id="Hero"
-      className="relative flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-10 md:gap-0 h-screen w-full mt-30 md:mt-10"
+      className="relative flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-10 md:gap-5 min-h-screen w-full pt-32 pb-16 "
     >
-        {/* Contenedor de Imagen de Perfil */}
-      <div className="relative group">
-        {/* Efecto de resplandor de fondo */}
-        <div className="absolute -inset-1 bg-linear-to-r from-secondary to-primary rounded-full blur opacity-25 group-hover:opacity-50 transition animate-duration-[4000ms] animate-pulse"></div>
-        
-        <div className="relative bg-background rounded-full p-1 shadow-2xl animate-fade-in">
+      {/* Blobs de luz CSS */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] size-[400px] 2xl:size-[700px] rounded-full bg-secondary/20 blur-[120px] animate-[pulse_6s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[10%] right-[-5%] size-[350px] 2xl:size-[600px] rounded-full bg-primary/20 blur-[100px] animate-[pulse_8s_ease-in-out_infinite]" />
+      </div>
+
+      {/* Contenedor de Imagen de Perfil */}
+      <div className="relative group shrink-0">
+        {/* Efecto de resplandor dinámico */}
+        <div className="absolute -inset-1.5 bg-linear-to-r from-secondary to-primary rounded-full blur opacity-25 group-hover:opacity-60 transition-opacity duration-1000 animate-[pulse_4s_ease-in-out_infinite]"></div>
+
+        <div className="relative bg-background rounded-full p-1.5 shadow-2xl animate-fade-in">
           <img
             src="images/me.webp"
             width={230}
             height={230}
-            className="rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+            className="rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out size-52 2xl:size-70"
             alt="Aarón García"
             fetchPriority="high"
           />
@@ -46,16 +53,21 @@ export default function Hero() {
       </div>
 
       {/* Textos y Social */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left z-10">
-        <span className="text-xl font-light tracking-wide">Hola, soy</span>
-        <h1 className="text-2xl md:text-4xl font-bold text-secondary mt-1 mb-2 tracking-tight">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left z-10 px-4">
+        <span className="text-xl 2xl:text-2xl font-light tracking-wide text-foreground/70 italic">
+          Hola, soy
+        </span>
+
+        {/* El nombre ahora escala hasta un tamaño masivo en monitores grandes */}
+        <h1 className="text-4xl md:text-5xl 2xl:text-7xl font-black text-secondary mt-1 mb-2 tracking-tight">
           Aarón García
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-6">
+
+        <p className="text-xl md:text-2xl 2xl:text-4xl text-muted-foreground font-medium mb-8">
           Desarrollador Web
         </p>
-        
-        <div className="animate-fade-in animate-delay-200">
+
+        <div className="animate-fade-in animate-delay-300">
           <SocialLinks />
         </div>
       </div>
