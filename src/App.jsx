@@ -28,7 +28,7 @@ export default function App() {
           <Skills />
           <Projects />
           <Contact />
-          <Ratings />
+          {/* <Ratings /> */}
         </Suspense>
       </main>
       <Footer />
