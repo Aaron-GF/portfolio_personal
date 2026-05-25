@@ -1,33 +1,10 @@
-import { useEffect, useState } from "react";
 import SocialLinks from "@/components/sections/hero/SocialLinks";
-import { useTheme } from "@/providers/ThemeContext";
 
 export default function Hero() {
-  const { theme } = useTheme();
-
-  // Lógica del tema optimizada
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window === "undefined") return true;
-    if (theme === "system")
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return theme === "dark";
-  });
-
-  useEffect(() => {
-    if (theme === "system") {
-      const media = window.matchMedia("(prefers-color-scheme: dark)");
-      const listener = (e) => setIsDark(e.matches);
-      setIsDark(media.matches);
-      media.addEventListener("change", listener);
-      return () => media.removeEventListener("change", listener);
-    }
-    setIsDark(theme === "dark");
-  }, [theme]);
-
   return (
     <section
       id="Hero"
-      className="relative flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-10 md:gap-5 min-h-screen w-full pt-32 pb-16 "
+      className="relative flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-10 md:gap-5 min-h-screen w-full pt-32 pb-16 overflow-x-hidden"
     >
       {/* Blobs de luz CSS */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -52,13 +29,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Textos y Social */}
+      {/* Textos y Links */}
       <div className="flex flex-col items-center md:items-start text-center md:text-left z-10 px-4">
         <span className="text-xl 2xl:text-2xl font-light tracking-wide text-foreground/70 italic">
           Hola, soy
         </span>
 
-        {/* El nombre ahora escala hasta un tamaño masivo en monitores grandes */}
         <h1 className="text-4xl md:text-5xl 2xl:text-7xl font-black text-secondary mt-1 mb-2 tracking-tight">
           Aarón García
         </h1>

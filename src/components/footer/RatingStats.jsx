@@ -8,7 +8,7 @@ export default function RatingStats() {
 
   if (totalVotes === 0) {
     return (
-      <div className="flex flex-col items-center justify-center p-6 w-80 text-center">
+      <div className="flex flex-col items-center justify-center p-6 text-center">
         <p className="text-primary">Aún no hay valoraciones</p>
         <p className="text-sm">¡Sé el primero en votar!</p>
       </div>
